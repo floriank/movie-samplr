@@ -11,5 +11,8 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe HomeHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'provides a dummy user signed in method for now' do
+    expect(user_signed_in?).to be_falsy
+    expect(user_signed_in?(true)).to be_truthy
+  end
 end
