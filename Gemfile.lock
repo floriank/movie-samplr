@@ -232,7 +232,7 @@ DEPENDENCIES
   factory_girl_rails
   jquery-rails
   launchy
-  pg
+  pg (~> 0.18.4)
   pry-rails
   rails (= 4.2.5.1)
   rspec-rails
