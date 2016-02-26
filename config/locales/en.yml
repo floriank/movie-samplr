@@ -25,7 +25,8 @@ en:
     index:
       hero_intro: Take control of your movie collection
       hero_intro_sub: Organize and share your favourite movies online
-      go_to_login: Start now
+      go_to_collection: My movie collection
+      favourite_movie: What's your favourite movie?
   layouts:
     application:
       title: MovieSamplr - organize and share your movies online

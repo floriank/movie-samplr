@@ -1,32 +1,36 @@
-@import 'variables';
-// center a div vertically they said, it's gonna be easy they said
-// see http://stackoverflow.com/a/6182661
-.outer {
-  display: table;
-  position: absolute;
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// the splash page actually uses the full page height of the device in question
+body.body--home--index {
   height: 100%;
-  width: 100%;
 }
 
-.middle {
-  display: table-cell;
-  vertical-align: middle;
+.intro {
+  margin-top: 120px;
 }
 
-.inner {
-  margin-left: auto;
-  margin-right: auto;
-
-  &.hero {
+.hero {
+  @include make-row();
+  > .wrapper {
     text-align: center;
-    font-size: 2rem;
-
-    small {
-      font-size: 50%;
-    }
-
+    @include make-xs-column(12);
     .catchy {
-      font-weight: $font--font-weight--default;
+      font-size: 32px;
     }
+  }
+}
+
+.options {
+  @include make-row();
+  margin-top: 32px;
+  > .wrapper {
+    text-align: center;
+    @include make-xs-column(8);
+    @include make-xs-column-offset(2);
+  }
+
+  .form-control {
+    height: 48px;
   }
 }

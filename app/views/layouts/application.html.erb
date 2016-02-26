@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= t('.title') %></title>
-  <%= stylesheet_link_tag 'application', media: 'all'%>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-<%= javascript_include_tag 'application' %>
-</body>
+  <head>
+    <title><%= t('.title') %></title>
+    <%= stylesheet_link_tag 'application', media: 'all'%>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class="body--<%= controller.controller_name %>--<%= controller.action_name %>">
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%= javascript_include_tag 'application' %>
+  </body>
 </html>

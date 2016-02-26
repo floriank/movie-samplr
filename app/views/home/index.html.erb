@@ -1,14 +1,22 @@
-<div class="outer">
-  <div class="middle">
-    <div class="inner hero">
+<div class="intro">
+  <%= render partial: 'logo' %>
+  <div class="hero">
+    <div class="wrapper">
       <h1 class="catchy"><%= t('.hero_intro') %> <br><small><%= t('.hero_intro_sub') %></small></h1>
-      <p>
+    </div>
+  </div>
+  <div class="options">
+    <div class="wrapper">
+      <form action="" class="form">
+        <label for="movie" class="control-label hidden"><%= t('.favourite_movie') %></label>
+        <input class="form-control" type="text" id="movie" placeholder="<%= t('.favourite_movie') %>">
+        <input type="submit" class="hidden" value="Search">
+      </form>
       <% if user_signed_in? %>
-        <%= link_to t('.go_to_your_collection'), '#', class: 'btn btn-default' %>
-      <% else %>
-        <%= link_to t('.go_to_login'), '#', class: 'btn btn-default' %>
+        <h3><%= t('.welcome-back', user: 'Florian') %></h3>
+        <%= link_to t('.go_to_collection'), '#', class: 'btn btn-link' %>
       <% end %>
-      </p>
     </div>
   </div>
 </div>
+

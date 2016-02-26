@@ -14,11 +14,15 @@
  *= require_self
  */
 @import "fonts";
-// @import "bourbon";
-// @import "bootstrap";
+@import "bootstrap-sprockets";
 
+// use custom remix of bootstrap
+@import "bootstrap_custom";
+
+// defaults contains generic css for elements shared on most pages
 @import "defaults";
 
 // home page (splash)
 @import "home";
+
 
