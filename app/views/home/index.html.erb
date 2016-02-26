@@ -1,15 +1,14 @@
 <div class="outer">
   <div class="middle">
     <div class="inner hero">
-      <h1><%= t('.hero_intro') %></h1>
+      <h1 class="catchy"><%= t('.hero_intro') %> <br><small><%= t('.hero_intro_sub') %></small></h1>
       <p>
       <% if user_signed_in? %>
-        <%= link_to '#', t('.go_to_your_collection'), class: 'btn btn-default' %>
+        <%= link_to t('.go_to_your_collection'), '#', class: 'btn btn-default' %>
       <% else %>
-        <%= link_to '#', t('.go_to_login'), class: 'btn btn-default' %>
+        <%= link_to t('.go_to_login'), '#', class: 'btn btn-default' %>
       <% end %>
       </p>
-
     </div>
   </div>
 </div>

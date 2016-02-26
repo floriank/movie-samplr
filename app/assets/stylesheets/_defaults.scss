@@ -10,3 +10,8 @@ body {
   background: $colours--background;
   color: $colours--font-colour--default;
 }
+
+a {
+  color: $colours--font-colour--default;
+  text-decoration: underline;
+}

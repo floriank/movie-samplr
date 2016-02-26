@@ -1,3 +1,4 @@
+@import 'variables';
 // center a div vertically they said, it's gonna be easy they said
 // see http://stackoverflow.com/a/6182661
 .outer {
@@ -18,5 +19,14 @@
 
   &.hero {
     text-align: center;
+    font-size: 2rem;
+
+    small {
+      font-size: 50%;
+    }
+
+    .catchy {
+      font-weight: $font--font-weight--default;
+    }
   }
 }

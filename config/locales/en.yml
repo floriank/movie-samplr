@@ -20,4 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  # views
+  home:
+    index:
+      hero_intro: Take control of your movie collection
+      hero_intro_sub: Organize and share your favourite movies online
+      go_to_login: Start now
+  layouts:
+    application:
+      title: MovieSamplr - organize and share your movies online
