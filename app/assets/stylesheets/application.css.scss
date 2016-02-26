@@ -13,7 +13,12 @@
  *= require_tree .
  *= require_self
  */
-
+@import "fonts";
 @import "bourbon";
 @import "bootstrap";
-@import "font-awesome";
+
+@import "defaults";
+
+// home page (splash)
+@import "home";
+

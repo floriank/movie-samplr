@@ -1,0 +1,22 @@
+// center a div vertically they said, it's gonna be easy they said
+// see http://stackoverflow.com/a/6182661
+.outer {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+
+  &.hero {
+    text-align: center;
+  }
+}
