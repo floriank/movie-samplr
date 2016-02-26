@@ -9,12 +9,12 @@
     <div class="wrapper">
       <form action="" class="form">
         <label for="movie" class="control-label hidden"><%= t('.favourite_movie') %></label>
-        <input class="form-control" type="text" id="movie" placeholder="<%= t('.favourite_movie') %>">
+        <input class="form-control" required type="text" id="movie" placeholder="<%= t('.favourite_movie') %>">
         <input type="submit" class="hidden" value="Search">
       </form>
-      <% if user_signed_in? %>
+      <% if user_signed_in?(true) %>
         <h3 class="welcome-back"><%= t('.welcome_back') %></h3>
-        <%= link_to t('.go_to_collection'), '#', class: 'btn btn-link', id: 'collection-link' %>
+        <%= link_to t('.go_to_collection'), '#', class: 'btn btn-default', id: 'collection-link' %>
       <% end %>
     </div>
   </div>

@@ -14,7 +14,7 @@ class SplashPage
     find('a#collection-link')
   end
 
-  def t(key)
-    I18n.t("home.index.#{key}")
+  def t(key, opts = {})
+    I18n.t("home.index.#{key}", opts)
   end
 end

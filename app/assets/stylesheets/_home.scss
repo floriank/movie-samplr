@@ -26,11 +26,26 @@ body.body--home--index {
   margin-top: 32px;
   > .wrapper {
     text-align: center;
-    @include make-xs-column(8);
-    @include make-xs-column-offset(2);
+    @include make-xs-column(12);
+    @include make-sm-column(8);
+    @include make-sm-column-offset(2);
+    @include make-md-column(6);
+    @include make-md-column-offset(3);
   }
 
   .form-control {
     height: 48px;
+  }
+}
+
+.logo {
+  text-align:center;
+  svg {
+    @media (max-width: $screen-sm-min) {
+      width: 400px;
+    }
+    @media (max-width: $screen-xs-max) {
+      width: 300px;
+    }
   }
 }
