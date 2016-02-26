@@ -13,8 +13,8 @@
         <input type="submit" class="hidden" value="Search">
       </form>
       <% if user_signed_in? %>
-        <h3><%= t('.welcome-back', user: 'Florian') %></h3>
-        <%= link_to t('.go_to_collection'), '#', class: 'btn btn-link' %>
+        <h3 class="welcome-back"><%= t('.welcome_back') %></h3>
+        <%= link_to t('.go_to_collection'), '#', class: 'btn btn-link', id: 'collection-link' %>
       <% end %>
     </div>
   </div>

@@ -27,6 +27,7 @@ en:
       hero_intro_sub: Organize and share your favourite movies online
       go_to_collection: My movie collection
       favourite_movie: What's your favourite movie?
+      welcome_back: Welcome back!
   layouts:
     application:
       title: MovieSamplr - organize and share your movies online

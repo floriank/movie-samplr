@@ -10,6 +10,10 @@ class SplashPage
     find('input#movie')
   end
 
+  def collection_link
+    find('a#collection-link')
+  end
+
   def t(key)
     I18n.t("home.index.#{key}")
   end
