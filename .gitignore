@@ -28,3 +28,6 @@ doc/
 .idea
 .secret
 .DS_Store
+
+# added by GitSavvy
+/.byebug_history
