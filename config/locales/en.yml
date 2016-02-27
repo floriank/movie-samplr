@@ -40,6 +40,7 @@ en:
       no_results_explanation: Sorry, we could not find any moving that matched your query.
     list:
       add_to_list: Add to my list
+      register_to_add: Login to add to list
   layouts:
     application:
       title: MovieSamplr - organize and share your movies online
