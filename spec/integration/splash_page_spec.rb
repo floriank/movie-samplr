@@ -16,6 +16,11 @@ describe SplashPage do
     expect(page.search_box).to be_present
   end
 
+  it 'should redirect to the search page if the users looks for a movie' do
+    page.search 'The Good, the Bad an the Ugly'
+    expect(page.current_path).to eql search_path
+  end
+
   context 'for a registered user' do
     before do
       # mock the user signed in function, as we do not have a real user for this

@@ -10,6 +10,11 @@ class SplashPage
     find('input#movie')
   end
 
+  def search(movie)
+    fill_in 'm', with: movie
+    find('input#submit', visible: false).click
+  end
+
   def collection_link
     find('a#collection-link')
   end
