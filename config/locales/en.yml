@@ -36,6 +36,8 @@ en:
       search_results_local_explanation: These are movies that other users on MovieSamplr enjoy.
       search_results_imdb: IMDb results
       search_results_imdb_explanation: These are movies on IMDb that might match your query
+      no_results: Nothing came up in our search :-(
+      no_results_explanation: Sorry, we could not find any moving that matched your query.
   layouts:
     application:
       title: MovieSamplr - organize and share your movies online

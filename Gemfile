@@ -43,6 +43,8 @@ end
 gem 'bcrypt-ruby'
 gem 'devise'
 
+gem 'imdb', '~> 0.8'
+
 group :development do
   gem 'rspec-rails'
   gem 'pry-rails'

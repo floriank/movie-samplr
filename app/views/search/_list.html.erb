@@ -1,0 +1,13 @@
+<% movies.each do |movie| %>
+  <div class="movie <%= 'imdb' if movie.imdb? %>">
+    <div class="movie-details">
+      <h3 class="movie-title"><%= movie.title %></h3>
+      <% if movie.synopsis.present? %>
+        <p class="movie-synopsis"><%= movie.synopsis %></p>
+      <% end %>
+    </div>
+    <div class="movie-actions">
+      <%= link_to t('.add_to_list'), '#', class: 'btn btn-default' %>
+    </div>
+  </div>
+<% end %>
