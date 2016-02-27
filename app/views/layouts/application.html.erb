@@ -10,9 +10,11 @@
     <%= csrf_meta_tags %>
   </head>
   <body class="body--<%= controller.controller_name %>--<%= controller.action_name %>">
+    <%= content_for :header %>
     <div class="container">
       <%= yield %>
     </div>
+    <%= content_for :footer %>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>

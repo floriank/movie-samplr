@@ -8,9 +8,9 @@
   <div class="options">
     <div class="wrapper">
       <form action="/search" action="get" class="form">
-        <label for="movie" class="control-label hidden"><%= t('.favourite_movie') %></label>
+        <label for="movie" class="control-label sr-only"><%= t('.favourite_movie') %></label>
         <input name="m" class="form-control" required type="text" id="movie" placeholder="<%= t('.favourite_movie') %>">
-        <input type="submit" id="submit" class="hidden" value="Search">
+        <input type="submit" id="submit" class="sr-only" value="Search">
       </form>
       <% if user_signed_in?(true) %>
         <h3 class="welcome-back"><%= t('.welcome_back') %></h3>

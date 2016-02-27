@@ -1,0 +1,32 @@
+<header>
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+          <span class="sr-only"><%= t('.toggle_navigation') %></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to root_path, class: 'navbar-brand' do %>
+          <%= render partial: 'home/logo', locals: { fill: '#fff' } %>
+        <% end %>
+      </div>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to t('.what_is_this'), '#' %>
+          </li>
+          <li>
+            <% if user_signed_in? %>
+              <%= link_to t('.my_collection'), '#' %>
+            <% else %>
+              <%= link_to t('.login_register'), '#' %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -28,7 +28,19 @@ en:
       go_to_collection: My movie collection
       favourite_movie: What's your favourite movie?
       welcome_back: Welcome back!
+  search:
+    index:
+      search_result_for: "Search results for \"%{query}\""
+      search_result_explanation: "These are the movies we know of that match your query:"
+      search_results_local: Movies watched by other users
+      search_results_local_explanation: These are movies that other users on MovieSamplr enjoy.
+      search_results_imdb: IMDb results
+      search_results_imdb_explanation: These are movies on IMDb that might match your query
   layouts:
     application:
       title: MovieSamplr - organize and share your movies online
       meta_description: "MovieSamplr is a tool to organize movie owned by your and share them easily"
+    app_header:
+      what_is_this: What's this?
+      login_register: Login or register
+      my_collection: My movie collection

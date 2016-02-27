@@ -1,0 +1,21 @@
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+.search-result {
+  @include make-row();
+}
+
+.database-results {
+  @include make-xs-column(12);
+}
+
+.imdb-results {
+  @include make-xs-column(12);
+}
+
+.navbar-brand {
+  .logo > svg {
+    width: 125px;
+    height: 30px;
+  }
+}

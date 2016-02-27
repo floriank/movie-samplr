@@ -1,1 +1,19 @@
-<p><%= @query %></p>
+<% content_for :header do %>
+  <%= render partial: 'layouts/app_header' %>
+<% end %>
+<div class="search-result">
+  <div class="query">
+    <h1><%= t('.search_result_for', query: @query) %></h1>
+    <p><%= t('.search_result_explanation') %></p>
+  </div>
+  <div class="database-results">
+    <%# movies from our database %>
+    <h2><%= t('.search_results_local') %></h2>
+    <p><%= t('.search_results_local_explanation') %></p>
+  </div>
+  <div class="imdb-results">
+    <%# movies from IMDB %>
+    <h2><%= t('.search_results_imdb') %></h2>
+    <p><%= t('.search_results_imdb_explanation') %></p>
+  </div>
+</div>
