@@ -11,6 +11,6 @@ class LookupImdbMovie
     if opts.key? :limit
       result = result.first(opts[:limit])
     end
-    result.map { |movie| MovieSearchResult.new title: movie.title, id: movie.id }
+    result.map { |movie| MovieSearchResult.new title: movie.title, id: movie.id, type: 'imdb' }
   end
 end

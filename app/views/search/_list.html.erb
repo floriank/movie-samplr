@@ -1,7 +1,14 @@
 <% movies.each do |movie| %>
   <div class="movie <%= 'imdb' if movie.imdb? %>">
     <div class="movie-details">
-      <h3 class="movie-title"><%= movie.title %></h3>
+      <h3 class="movie-title">
+        <%= movie.title %>
+        <% if movie.imdb? %>
+          <small>
+            <%= link_to t('.this_movie_on_imdb'), imdb_url(movie) %>
+          </small>
+        <% end %>
+      </h3>
       <% if movie.synopsis.present? %>
         <p class="movie-synopsis"><%= movie.synopsis %></p>
       <% end %>

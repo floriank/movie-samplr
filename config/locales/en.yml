@@ -38,6 +38,8 @@ en:
       search_results_imdb_explanation: These are movies on IMDb that might match your query
       no_results: Nothing came up in our search :-(
       no_results_explanation: Sorry, we could not find any moving that matched your query.
+    list:
+      add_to_list: Add to my list
   layouts:
     application:
       title: MovieSamplr - organize and share your movies online
@@ -46,3 +48,5 @@ en:
       what_is_this: What's this?
       login_register: Login or register
       my_collection: My movie collection
+      submit: Search
+      favourite_genre: What's your favourite genre?
