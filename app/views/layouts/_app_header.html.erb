@@ -15,7 +15,7 @@
 
       <form class="navbar-form navbar-right" action="/search" method="get" role="search">
         <div class="form-group">
-          <input type="text" name="m" placeholder="<%= t('.favourite_genre') %>" class="form-control">
+          <input type="text" name="m" value="<%= @query %>" placeholder="<%= t('.favourite_genre') %>" class="form-control">
         </div>
         <button type="submit" class="btn btn-default sr-only"><%= t('.submit') %></button>
       </form>
@@ -27,8 +27,9 @@
           <li>
             <% if user_signed_in? %>
               <%= link_to t('.my_collection'), '#' %>
+              <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
             <% else %>
-              <%= link_to t('.login_register'), '#' %>
+              <%= link_to t('.login_register'), new_user_registration_path %>
             <% end %>
           </li>
         </ul>
