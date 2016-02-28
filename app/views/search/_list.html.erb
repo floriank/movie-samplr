@@ -17,7 +17,7 @@
       <% if user_signed_in? %>
         <%= link_to t('.add_to_list'), '#', class: 'btn btn-default' %>
       <% else %>
-        <%= link_to t('.register_to_add'), new_user_registration_path, class: 'btn btn-default' %>
+        <%= link_to t('.register_to_add'), new_user_registration_path(m: @query), class: 'btn btn-default' %>
       <% end %>
     </div>
   </div>

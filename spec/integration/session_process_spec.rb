@@ -47,6 +47,16 @@ describe SessionProcess do
       end
     end
 
+    context 'after clicking on the add link' do
+      let(:query) { 'Austin Powers 2' }
+      let(:page) { described_class.new(new_user_registration_path(m: query)) }
+
+      it 'redirects the user back to the search page they came from after registering' do
+        page.register_as new_user
+        expect(page.current_path).to eql search_path
+      end
+    end
+
     it_behaves_like 'for a logged in user'
   end
 
@@ -63,6 +73,16 @@ describe SessionProcess do
       it 'allows switching to registration' do
         page.switch_to_register
         expect(page.current_path).to eql new_user_registration_path
+      end
+    end
+
+    context 'after clicking on the add link' do
+      let(:query) { 'Austin Powers 3' }
+      let(:page) { described_class.new(new_user_session_path(m: query)) }
+
+      it 'redirects the user back to the search page they came from after registering' do
+        page.login_as user
+        expect(page.current_path).to eql search_path
       end
     end
 

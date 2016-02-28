@@ -32,7 +32,7 @@
           <% end %>
         </div>
       <% end -%>
-
+      <%= hidden_field_tag 'user[query]', optional_query %>
       <div class="actions">
         <%= f.submit t('.log_in'), class: 'btn btn-default' %>
       </div>
