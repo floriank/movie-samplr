@@ -1,5 +1,5 @@
 class CreateDataset
-  def self.for(movie)
+  def self.for(_movie)
     true
   end
 end

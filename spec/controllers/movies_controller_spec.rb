@@ -16,7 +16,6 @@ RSpec.describe MoviesController, type: :controller do
   end
 
   context 'for a proper user' do
-
     before do
       allow(request.env['warden']).to receive(:authenticate!).and_return(user)
       allow(controller).to receive(:current_user).and_return(user)
@@ -24,22 +23,18 @@ RSpec.describe MoviesController, type: :controller do
 
     describe '#create' do
       it 'adds a movie to the default list of the user' do
-        post :create, {
-          movie: {
-            imdb_id: 'foo',
-            title: '8 Mile'
-          }
+        post :create, movie: {
+          imdb_id: 'foo',
+          title: '8 Mile'
         }
 
         expect(response).to be_successful
       end
 
       it 'responds with unprocessable_entity if something goe wrong' do
-        post :create, {
-          movie: {
-            title: '2001: A space odyssey',
-            imdb_id: ''
-          }
+        post :create,           movie: {
+          title: '2001: A space odyssey',
+          imdb_id: ''
         }
 
         expect(response).to_not be_successful
@@ -49,7 +44,6 @@ RSpec.describe MoviesController, type: :controller do
 
     describe '#destroy' do
       it 'removes a movie from a given list' do
-
       end
     end
   end

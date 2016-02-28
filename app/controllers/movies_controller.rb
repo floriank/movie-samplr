@@ -1,5 +1,4 @@
 class MoviesController < ApplicationController
-
   before_action :authenticate_user!
 
   rescue_from ActionController::ParameterMissing do
@@ -19,7 +18,6 @@ class MoviesController < ApplicationController
 
   # aka. copy to list
   def update
-
   end
 
   # aka. remove from list

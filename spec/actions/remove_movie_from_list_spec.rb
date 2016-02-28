@@ -10,7 +10,7 @@ describe RemoveMovieFromList do
   end
 
   it 'removes a a movie from the default list if no list is given' do
-    result, _ = action.for movie: movie, user: user
+    result, = action.for movie: movie, user: user
     expect(result).to equal(movie)
     expect(user.lists.default.movies.length).to eql 0
   end

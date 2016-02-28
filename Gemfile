@@ -36,6 +36,8 @@ gem 'bcrypt-ruby'
 gem 'devise'
 gem 'imdb', '~> 0.8'
 
+gem 'rspec_junit_formatter', '0.2.2'
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
