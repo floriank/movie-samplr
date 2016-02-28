@@ -1,5 +1,4 @@
 class SearchController < ApplicationController
-
   before_filter :require_query!
 
   def index

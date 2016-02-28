@@ -11,13 +11,13 @@ class SessionProcess
     fill_in 'user_email', with: override.fetch(:email, user.email)
     fill_in 'user_password', with: override.fetch(:password, user.password)
     fill_in 'user_password_confirmation', with: override.fetch(:password_confirmation, user.password)
-    click_on t("registrations.new.sign_up")
+    click_on t('registrations.new.sign_up')
   end
 
   def login_as(user, override = {})
     fill_in 'user_email', with: override.fetch(:email, user.email)
     fill_in 'user_password', with: override.fetch(:password, user.password)
-    click_on t("sessions.new.log_in")
+    click_on t('sessions.new.log_in')
   end
 
   def error_message?
@@ -37,4 +37,3 @@ class SessionProcess
     I18n.t("devise.#{term}")
   end
 end
-

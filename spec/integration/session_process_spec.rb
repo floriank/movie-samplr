@@ -8,7 +8,6 @@ describe SessionProcess do
   let(:user) { create :user, password: password, email: email }
   let(:page) { described_class.new }
 
-
   shared_examples 'for a logged in user' do
     before do
       login_as user, scope: :user

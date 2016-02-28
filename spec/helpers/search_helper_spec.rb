@@ -12,7 +12,7 @@ require 'rails_helper'
 # end
 RSpec.describe SearchHelper, type: :helper do
   it 'creates an imdb link for a given movie search result' do
-    movie = MovieSearchResult.new type: 'imdb', id: 110220, title: 'Deadpool'
+    movie = MovieSearchResult.new type: 'imdb', id: 110_220, title: 'Deadpool'
     expect(imdb_url(movie)).to eql 'http://imdb.com/title/tt110220'
   end
 end

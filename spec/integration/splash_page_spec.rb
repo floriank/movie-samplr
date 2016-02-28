@@ -1,5 +1,5 @@
 require 'rails_helper'
-require_relative "splash_page"
+require_relative 'splash_page'
 
 describe SplashPage do
   let(:page) { described_class.new }
