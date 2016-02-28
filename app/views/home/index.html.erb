@@ -12,7 +12,7 @@
         <input name="m" class="form-control" required type="text" id="movie" placeholder="<%= t('.favourite_movie') %>">
         <input type="submit" id="submit" class="sr-only" value="Search">
       </form>
-      <% if user_signed_in?(true) %>
+      <% if user_signed_in? %>
         <h3 class="welcome-back"><%= t('.welcome_back') %></h3>
         <%= link_to t('.go_to_collection'), '#', class: 'btn btn-default', id: 'collection-link' %>
       <% end %>
