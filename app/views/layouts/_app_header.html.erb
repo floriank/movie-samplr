@@ -24,14 +24,18 @@
           <li>
             <%= link_to t('.what_is_this'), '#' %>
           </li>
-          <li>
-            <% if user_signed_in? %>
+          <% if user_signed_in? %>
+            <li>
               <%= link_to t('.my_collection'), '#' %>
+            </li>
+            <li>
               <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
-            <% else %>
+            </li>
+          <% else %>
+            <li>
               <%= link_to t('.login_register'), new_user_registration_path %>
-            <% end %>
-          </li>
+            </li>
+          <% end %>
         </ul>
       </div>
     </div>

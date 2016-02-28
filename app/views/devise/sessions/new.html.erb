@@ -1,0 +1,43 @@
+<% content_for :header do %>
+  <%= render partial: 'layouts/app_header' %>
+<% end %>
+<div class="user-register">
+  <div class="wrapper">
+    <h1><%= t('.welcome_back') %></h1>
+    <%= form_for(resource, as: resource_name, url: user_session_path) do |f| %>
+      <%# TODO: extract %>
+      <% if flash[:alert] %>
+        <div id="error_explanation">
+          <ul class="errors">
+            <li>
+              <%= flash[:alert] %>
+            </li>
+          </ul>
+        </div>
+      <% end %>
+      <div class="form-group">
+        <%= f.label :email, class: 'control-label sr-only' %>
+        <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: t('.email_placeholder') %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password, class: 'control-label sr-only' %>
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: t('.password_placeholder') %>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+        <div class="checkbox">
+          <%= label_tag do %>
+            <%= f.check_box :remember_me %> <%= t('.remember_me') %>
+          <% end %>
+        </div>
+      <% end -%>
+
+      <div class="actions">
+        <%= f.submit t('.log_in'), class: 'btn btn-default' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "devise/shared/links" %>

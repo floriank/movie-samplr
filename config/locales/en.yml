@@ -37,17 +37,42 @@ en:
       search_results_imdb: IMDb results
       search_results_imdb_explanation: These are movies on IMDb that might match your query
       no_results: Nothing came up in our search :-(
-      no_results_explanation: Sorry, we could not find any moving that matched your query.
+      no_results_explanation: Sorry, we could not find any movie that matched your query.
     list:
       add_to_list: Add to my list
-      register_to_add: Login to add to list
+      register_to_add: Log in to add to list
+  # devise override
+  devise:
+    registrations:
+      new:
+        sign_up: Create an account
+        sign_up_header: Start organizing
+        email_placeholder: Email address
+        password_placeholder: Your password
+        password_confirmation_placeholder: The password above, again
+    sessions:
+      new:
+        welcome_back: Welcome back!
+        email_placeholder: Email address
+        password_placeholder: Your password
+        log_in: Log in to continue
+    passwords:
+      new:
+        forgot_password: Forgot your password? No problem!
+        email_placeholder: Your email
+        send_instructions: Send me instructions!
+    shared:
+      links:
+        already_registered_login: Already have an account? Log in here!
+        forgot_password: Forgot your password? No problem! Click here!
+        not_registered_yet_create_account: No account yet? Click here!
   layouts:
     application:
       title: MovieSamplr - organize and share your movies online
       meta_description: "MovieSamplr is a tool to organize movie owned by your and share them easily"
     app_header:
       what_is_this: What's this?
-      login_register: Login or register
+      login_register: Log in or register
       my_collection: My movie collection
       submit: Search
       favourite_genre: What's your favourite genre?

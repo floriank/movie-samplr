@@ -1,0 +1,39 @@
+/**
+ * styling for user session related processes (login/register)
+ */
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "variables";
+
+.user-register, .user-actions {
+  @include make-row();
+  > .wrapper {
+    @include make-xs-column(10);
+    @include make-xs-column-offset(1);
+    @include make-md-column(6);
+    @include make-md-column-offset(3);
+
+  }
+}
+
+.user-actions {
+  .links {
+    list-style: none;
+    padding: 0;
+    margin:  $margin--default 0;
+  }
+}
+
+#error_explanation {
+  @include alert-variant(#000, #fff, #fff);
+  padding: $padding--default;
+  margin: $margin--default 0;
+  border: 1px solid;
+  border-radius: $border-radius-small;
+
+  > .errors {
+    padding: $padding--default 2.5* $padding--default;
+    margin: 0
+  }
+}
+

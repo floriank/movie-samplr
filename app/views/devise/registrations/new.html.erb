@@ -1,0 +1,41 @@
+<% content_for :header do %>
+  <%= render partial: 'layouts/app_header' %>
+<% end %>
+<div class="user-register">
+  <div class="wrapper">
+    <h1><%= t('.sign_up_header') %></h1>
+    <%= form_for(resource, as: resource_name, url: user_registration_path) do |f| %>
+      <% if resource.errors.any? %>
+        <div id="error_explanation">
+          <ul class="errors">
+            <% resource.errors.full_messages.each do |error| %>
+            <li>
+              <%= error %>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.label :email, class: 'control-label sr-only' %>
+        <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: t('.email_placeholder') %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password, class: 'control-label sr-only' %>
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: t('.password_placeholder') %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password_confirmation, class: 'control-label sr-only' %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: t('.password_confirmation_placeholder') %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit t('.sign_up'), class: 'btn btn-default' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= render "devise/shared/links" %>
