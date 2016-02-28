@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :trackable, :recoverable, :rememberable, :validatable
 
   has_many :lists
+  has_many :movies, dependent: :destroy
 
   after_save :create_default_list!
 

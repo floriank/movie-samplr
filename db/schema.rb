@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20160228154500) do
   create_table "movies", force: :cascade do |t|
     t.string   "name"
     t.string   "imdb_id",    null: false
+    t.integer  "user_id",    null: false
     t.text     "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

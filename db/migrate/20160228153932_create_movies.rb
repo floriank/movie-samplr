@@ -3,6 +3,7 @@ class CreateMovies < ActiveRecord::Migration
     create_table :movies do |t|
       t.string :name
       t.string :imdb_id, null: false
+      t.integer :user_id, null: false
       t.text :notes
       t.timestamps null: false
     end

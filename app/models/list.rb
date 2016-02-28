@@ -7,6 +7,8 @@ class List < ActiveRecord::Base
   validates :user, presence: true
   validates :name, presence: true, length: { minimum: 5 }
 
+  scope :for, ->(user) { where user: user }
+
   def self.default
     find_or_initialize_by(default: true)
   end
