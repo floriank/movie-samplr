@@ -31,19 +31,6 @@ require 'capybara/rails'
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 RSpec.configure do |config|
-  config.use_transactional_fixtures = false
-
-  config.before(:suite) do
-    DatabaseCleaner.strategy = :truncation
-  end
-
-  config.before(:each) do
-    DatabaseCleaner.start
-  end
-
-  config.after(:each) do
-    DatabaseCleaner.clean
-  end
 
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
@@ -64,9 +51,24 @@ RSpec.configure do |config|
 
   # Factory Settings
   config.include FactoryGirl::Syntax::Methods
-  config.before(:suite) do
+  config.use_transactional_fixtures = false
+
+  # Use transactions by default
+  config.before :each do
+    DatabaseCleaner.strategy = :transaction
+  end
+
+  # For the javascript-enabled tests, switch to truncation, but *only on tables that were used*
+  config.before :each, js: true do
+    DatabaseCleaner.strategy = :truncation, { pre_count: true }
+  end
+
+  config.before :each do
+    DatabaseCleaner.start
+  end
+
+  config.after :each do
     DatabaseCleaner.clean
-    FactoryGirl.lint
   end
 end
 
