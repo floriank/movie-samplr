@@ -2,6 +2,10 @@ class MoviesController < ApplicationController
 
   before_action :authenticate_user!
 
+  rescue_from ActionController::ParameterMissing do
+    render json: {}, status: :unprocessable_entity
+  end
+
   # aka. add to initial list
   def create
     movie, errors = AddMovieToList.for user: current_user, title: movie_title, imdb_id: imdb_id
@@ -20,8 +24,8 @@ class MoviesController < ApplicationController
 
   # aka. remove from list
   def destroy
-    find_movie_and_list
-    movie, errors = RemoveMovieFromList.for user: current_user, list: @list, movie: @movie
+    find_movie
+    movie, errors = RemoveMovieFromList.for user: current_user, movie: @movie
     if errors.any?
       render json: { errors: errors }, status: :unauthorized
     else
@@ -47,8 +51,7 @@ class MoviesController < ApplicationController
     movie_params.require(:imdb_id)
   end
 
-  def find_movie_and_list
-    @movie = Movie.by(current_user).find(movie_params[:id])
-    @list = List.for(current_user).find(list_params[:id])
+  def find_movie
+    @movie = Movie.by(current_user).find_by(imdb_id: params[:id])
   end
 end

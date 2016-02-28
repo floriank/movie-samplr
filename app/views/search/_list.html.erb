@@ -16,7 +16,7 @@
     <div class="movie-actions">
       <% if user_signed_in? %>
         <% if user_has_movie?(movie) %>
-          <%= button_tag t('.remove_from_list'), class: 'btn btn-default', data: { href: movies_path(movie.id), id: movie.id, removed: t('.removed_from_list') } %>
+          <%= button_tag t('.remove_from_list'), class: 'btn btn-default remove-from-default-list', data: { href: movie_path(movie.id), id: movie.id, removed: t('.removed_from_list') } %>
         <% else %>
           <%= button_tag t('.add_to_list'), class: 'btn btn-default add-to-default-list', data: { href: movies_path, id: movie.id, title: movie.title, added: t('.added_to_list') } %>
         <% end %>

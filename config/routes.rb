@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     sessions: 'sessions'
   }
 
-  resource :movies, only: [:create, :update, :destroy]
+  resources :movies, only: [:create, :update, :destroy]
 
   get :search, to: 'search#index', as: :search
   root to: 'home#index'
