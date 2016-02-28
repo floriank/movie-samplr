@@ -2,27 +2,16 @@
   <%= render partial: 'layouts/app_header' %>
 <% end %>
 <div class="search-result">
-  <% if @local_results.any? || @imdb_results.any? %>
+  <% if @imdb_results.any? %>
     <div class="query">
       <h1><%= t('.search_result_for', query: @query) %></h1>
       <p><%= t('.search_result_explanation') %></p>
     </div>
-    <% if @local_results.any? %>
-      <div class="database-results">
-        <%# movies from our database %>
-        <h2><%= t('.search_results_local') %></h2>
-        <p><%= t('.search_results_local_explanation') %></p>
-        <%= render partial: 'list', locals: { movies: @imdb_results } %>
-      </div>
-    <% end %>
-    <% if @imdb_results.any? %>
-      <div class="imdb-results">
-        <%# movies from IMDB %>
-        <h2><%= t('.search_results_imdb') %></h2>
-        <p><%= t('.search_results_imdb_explanation') %></p>
-        <%= render partial: 'list', locals: { movies: @imdb_results } %>
-      </div>
-    <% end %>
+    <div class="imdb-results">
+      <h2><%= t('.search_results_imdb') %></h2>
+      <p><%= t('.search_results_imdb_explanation') %></p>
+      <%= render partial: 'list', locals: { movies: @imdb_results } %>
+    </div>
   <% else %>
     <div class="no-results">
       <h1><%= t('.no_results') %></h1>

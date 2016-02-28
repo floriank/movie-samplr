@@ -2,7 +2,6 @@ class SearchController < ApplicationController
   before_filter :require_query!
 
   def index
-    @local_results = LookupMovie.for search_query
     @imdb_results = LookupImdbMovie.for(search_query, limit: 10)
   end
 

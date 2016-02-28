@@ -43,6 +43,9 @@ en:
       no_results_explanation: Sorry, we could not find any movie that matched your query.
     list:
       add_to_list: Add to my list
+      removed_from_list: Removed!
+      remove_from_list: Remove from list
+      added_to_list: Added!
       register_to_add: Log in to add to list
   # devise override
   devise:

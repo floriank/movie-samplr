@@ -3,6 +3,9 @@ Rails.application.routes.draw do
     registrations: 'registrations',
     sessions: 'sessions'
   }
+
+  resource :movies, only: [:create, :update, :destroy]
+
   get :search, to: 'search#index', as: :search
   root to: 'home#index'
 end

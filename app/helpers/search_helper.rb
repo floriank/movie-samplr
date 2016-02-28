@@ -6,4 +6,8 @@ module SearchHelper
   def optional_query
     params[:m]
   end
+
+  def user_has_movie?(movie)
+    current_user.lists.default.movies.pluck(:imdb_id).include? movie.id
+  end
 end

@@ -42,20 +42,21 @@ ActiveRecord::Schema.define(version: 20160228154500) do
 
   add_index "lists", ["user_id"], name: "index_lists_on_user_id", using: :btree
 
+  create_table "lists_movies", force: :cascade do |t|
+    t.integer "list_id"
+    t.integer "movie_id"
+  end
+
+  add_index "lists_movies", ["list_id"], name: "index_lists_movies_on_list_id", using: :btree
+  add_index "lists_movies", ["movie_id"], name: "index_lists_movies_on_movie_id", using: :btree
+
   create_table "movies", force: :cascade do |t|
     t.string   "name"
+    t.string   "imdb_id",    null: false
     t.text     "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  create_table "movies_lists", force: :cascade do |t|
-    t.integer "movie_id"
-    t.integer "list_id"
-  end
-
-  add_index "movies_lists", ["list_id"], name: "index_movies_lists_on_list_id", using: :btree
-  add_index "movies_lists", ["movie_id"], name: "index_movies_lists_on_movie_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

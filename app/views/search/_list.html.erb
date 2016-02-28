@@ -15,7 +15,11 @@
     </div>
     <div class="movie-actions">
       <% if user_signed_in? %>
-        <%= link_to t('.add_to_list'), '#', class: 'btn btn-default' %>
+        <% if user_has_movie?(movie) %>
+          <%= button_tag t('.remove_from_list'), class: 'btn btn-default', data: { href: movies_path(movie.id), id: movie.id, removed: t('.removed_from_list') } %>
+        <% else %>
+          <%= button_tag t('.add_to_list'), class: 'btn btn-default add-to-default-list', data: { href: movies_path, id: movie.id, title: movie.title, added: t('.added_to_list') } %>
+        <% end %>
       <% else %>
         <%= link_to t('.register_to_add'), new_user_registration_path(m: @query), class: 'btn btn-default' %>
       <% end %>
