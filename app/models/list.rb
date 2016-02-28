@@ -2,7 +2,7 @@
 # A user can have n ists containing m movies.
 class List < ActiveRecord::Base
   belongs_to :user
-  has_many :movies
+  has_and_belongs_to_many :movies
 
   validates :user, presence: true
   validates :name, presence: true, length: { minimum: 5 }
