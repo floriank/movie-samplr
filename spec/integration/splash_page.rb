@@ -1,6 +1,6 @@
 # a page object to unify the handling of the splash page
 class SplashPage
-  include Capybara::DSL
+  include CommonPageObject
 
   def initialize
     visit '/'

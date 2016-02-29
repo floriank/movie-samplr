@@ -1,7 +1,6 @@
 # a page object describing the registration/login/forgot password process
 class SessionProcess
-  include Capybara::DSL
-  include Rails.application.routes.url_helpers
+  include CommonPageObject
 
   def initialize(to = new_user_registration_path)
     visit to

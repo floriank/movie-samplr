@@ -72,7 +72,16 @@ RSpec.configure do |config|
 end
 
 module CommonPageObject
-  include Capybara::DSL
+  extend ActiveSupport::Concern
+
+  included do
+    include Capybara::DSL
+    include Rails.application.routes.url_helpers
+
+    def default_url_options
+      ActionMailer::Base.default_url_options
+    end
+  end
 
   def login_as!(user, password = 'stanl3ykubr1k')
     visit new_user_session_path
