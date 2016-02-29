@@ -9,6 +9,9 @@ class List < ActiveRecord::Base
 
   scope :for, ->(user) { where user: user }
 
+  # default order always starts with the one default list, then every other list by name
+  default_scope { order('"default" DESC, name ASC') }
+
   def self.default
     find_or_initialize_by(default: true)
   end

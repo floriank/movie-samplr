@@ -1,0 +1,8 @@
+<% content_for :header do %>
+  <%= render partial: 'layouts/app_header' %>
+<% end %>
+<div class="lists">
+  <% current_user.lists.each do |list| %>
+    <%= render partial: 'list', locals: { list: list } %>
+  <% end %>
+</div>

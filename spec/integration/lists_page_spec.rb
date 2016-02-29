@@ -23,4 +23,14 @@ describe ListsPage do
       end
     end
   end
+
+  describe '#edit' do
+    let(:list_name) { 'My personal movie collection' }
+    it 'allows the renaming of a list' do
+      page.go_to_collection
+      page.rename_default_list(list_name)
+      expect(page).to have_content(list_name)
+      expect(user.lists.default.name).to eql list_name
+    end
+  end
 end

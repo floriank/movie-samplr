@@ -14,7 +14,9 @@
       </form>
       <% if user_signed_in? %>
         <h3 class="welcome-back"><%= t('.welcome_back') %></h3>
-        <%= link_to t('.go_to_collection'), '#', class: 'btn btn-default', id: 'collection-link' %>
+        <%= link_to t('.go_to_collection'), lists_path, class: 'btn btn-default', id: 'collection-link' %>
+      <% else %>
+        <%= link_to ('.go_to_login'), new_user_session_path %>
       <% end %>
     </div>
   </div>
