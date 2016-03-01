@@ -48,7 +48,7 @@ describe ListsPage do
 
   describe '#show' do
     it 'shows the full list of movies' do
-      (Movie::MAX_DISPLAY + 1).times do
+      (Movie::MAX_DISPLAY + 1).times do |n|
         user.lists.default << create(:movie, name: "Movie ##{n}")
       end
       (Movie::MAX_DISPLAY + 1).times do |n|

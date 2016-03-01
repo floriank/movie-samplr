@@ -9,12 +9,16 @@ class MoviePresenter
   end
 
   def poster
-    dataset.poster || 'default_poster.png'
+    dataset.poster_url || 'default_poster.png'
   end
 
   def hint
     return title if @movie.dataset.present?
     I18n.t('movie.loading')
+  end
+
+  def loaded?
+    @movie.dataset.present?
   end
 
   private

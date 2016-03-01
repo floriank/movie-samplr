@@ -8,7 +8,7 @@ class Movie < ActiveRecord::Base
   validates :name, presence: true
   validates :imdb_id, presence: true
 
-  belongs_to :dataset, foreign_key: :imdb_id
+  belongs_to :dataset, foreign_key: :imdb_id, primary_key: :imdb_id
 
   default_scope { order('updated_at DESC')}
 
