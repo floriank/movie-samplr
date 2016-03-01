@@ -7,4 +7,10 @@ describe MovieSearchResult do
     expect(result.imdb?).to be_falsy
     expect(result.local?).to be_truthy
   end
+
+  it 'decides if a result is local' do
+    reult = described_class.new title: 'Deadpool', type: 'imdb'
+    expect(result.local?).to be_falsy
+    expect(result.imdb?).to be_truthy
+  end
 end

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe MoviePresenter do
-  let(:movie) { create :movie, name: 'Lego Movie' }
+  let(:movie) { build :movie, name: 'Lego Movie' }
   let(:presenter) { described_class.new(movie) }
 
   context 'fo a movie without a dataset' do
@@ -23,7 +23,7 @@ describe MoviePresenter do
   end
 
   context 'for a movie with a proper dataset' do
-    let(:movie) { create :movie, dataset: create(:dataset) }
+    let(:movie) { build :movie, dataset: create(:dataset) }
 
     it 'uses the title from the movie anyway' do
       expect(presenter.title).to eql movie.name
@@ -35,6 +35,14 @@ describe MoviePresenter do
 
     it 'responds truthfully to #loaded?' do
       expect(presenter.loaded?).to be_truthy
+    end
+
+    it 'provides the cast from the dataset' do
+      expect(presenter.cast).to eql 'Ryan Reynolds, Morena Baccarin, T.J. Miller'
+    end
+
+    it 'provides the director from the dataset' do
+      expect(presenter.directors).to eql 'Tim Miller'
     end
   end
 end
