@@ -34,6 +34,7 @@ en:
       rename: Rename
       delete: Remove this list
       empty: This list has no entries
+      more: Show more movies
     edit:
       rename: What is the new name for the list?
     new:

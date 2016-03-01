@@ -49,8 +49,10 @@ describe ListsPage do
   describe '#show' do
     it 'shows the full list of movies' do
       (Movie::MAX_DISPLAY + 1).times do |n|
-        user.lists.default << create(:movie, name: "Movie ##{n}")
+        user.lists.default.movies << create(:movie, name: "Movie ##{n}")
       end
+      page.go_to_collection
+      page.show_more
       (Movie::MAX_DISPLAY + 1).times do |n|
         expect(page).to have_content "Movie ##{n}"
       end

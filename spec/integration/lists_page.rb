@@ -21,6 +21,10 @@ class ListsPage
     first('.delete-link').click
   end
 
+  def show_more
+    first('.movie.more > a').click
+  end
+
   def t(key)
     I18n.t("lists.#{key}")
   end
