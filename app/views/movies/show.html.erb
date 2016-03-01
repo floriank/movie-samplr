@@ -7,9 +7,18 @@
     <%= image_tag @movie.poster %>
   </div>
   <div class="body">
-    <h1><%= @movie.title %></h1>
+    <h1><%= @movie.title %> <small><%= @movie.tagline %></small></h1>
     <% if @movie.loaded? %>
-
+      <p class="plot-summary">"<%= @movie.plot_summary %>"</p>
+      <h3><%= t('.data') %></h3>
+      <dl>
+        <dt><%= t('.directed_by') %></dt>
+        <dd><%= @movie.directors %></dd>
+        <dt><%= t('.starring') %></dt>
+        <dd><%= @movie.cast %></dd>
+        <dt><%= t('.year') %></dt>
+        <dd><%= @movie.year %></dd>
+      </dl>
     <% else %>
       <p><em><%== t('.movie_being_loaded') %></em></p>
     <% end %>

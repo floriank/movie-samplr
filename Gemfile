@@ -32,9 +32,10 @@ group :development, :test do
   gem 'pry-rails'
 end
 
-gem 'bcrypt-ruby'
-gem 'devise'
+gem 'bcrypt-ruby', '~> 3.1'
+gem 'devise', '~> 3.5'
 gem 'imdb', '~> 0.8'
+gem 'sidekiq', '~> 4.1'
 
 gem 'rspec_junit_formatter', '0.2.2'
 

@@ -26,7 +26,8 @@ module MovieSamplr
     # load all the actions alongside the normal rails autoloads
     config.autoload_paths += [
       Rails.root.join('app', 'actions'),
-      Rails.root.join('app', 'presenters')
+      Rails.root.join('app', 'presenters'),
+      Rails.root.join('app', 'workers')
     ]
   end
 end
