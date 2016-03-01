@@ -31,3 +31,4 @@ doc/
 
 # added by GitSavvy
 /.byebug_history
+coverage

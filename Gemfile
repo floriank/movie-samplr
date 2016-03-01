@@ -30,6 +30,7 @@ gem 'bootstrap-sass', '~> 3.3'
 
 group :development, :test do
   gem 'pry-rails'
+  gem 'simplecov'
 end
 
 gem 'bcrypt-ruby', '~> 3.1'
