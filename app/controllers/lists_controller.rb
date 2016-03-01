@@ -24,6 +24,7 @@ class ListsController < ApplicationController
   end
 
   def edit
+    session[:return_to] ||= request.referer
     @list = List.for(current_user).find(params[:id])
   rescue
     redirect_to lists_path
@@ -32,7 +33,7 @@ class ListsController < ApplicationController
   def update
     @list = List.for(current_user).find(params[:id])
     if @list.update_attributes(list_params)
-      redirect_to lists_path
+      redirect_to session.delete(:return_to)
     else
       render :edit
     end

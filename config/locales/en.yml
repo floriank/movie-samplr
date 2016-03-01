@@ -63,6 +63,10 @@ en:
       remove_from_list: Remove from list
       added_to_list: Added!
       register_to_add: Log in to add to list
+  movies:
+    show:
+      movie_being_loaded: This movies data is curently being fetched from <a href="http://imdb.com">IMDb</a>
+      lists: This movie is in the following lists
   # devise override
   devise:
     registrations:

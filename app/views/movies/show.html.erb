@@ -1,0 +1,23 @@
+<% content_for :header do %>
+  <%= render partial: 'layouts/app_header' %>
+<% end %>
+
+<div class="movie">
+  <div class="poster">
+    <%= image_tag @movie.poster %>
+  </div>
+  <div class="body">
+    <h1><%= @movie.title %></h1>
+    <% if @movie.loaded? %>
+
+    <% else %>
+      <p><em><%== t('.movie_being_loaded') %></em></p>
+    <% end %>
+    <h3><%= t('.lists') %></h3>
+    <ul>
+      <% @movie.lists.each do |list| %>
+        <li><%= link_to list.name, list_path(list) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

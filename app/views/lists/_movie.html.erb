@@ -1,4 +1,6 @@
 <li class="movie">
-  <%= image_tag movie.poster, class: 'img-responsive poster', title: movie.hint %>
-  <p class="title"><%= movie.title %></p>
+  <%= link_to movie.path do %>
+    <%= image_tag movie.poster, class: 'img-responsive poster', title: movie.hint %>
+    <p class="title"><%= movie.title %></p>
+  <% end %>
 </li>

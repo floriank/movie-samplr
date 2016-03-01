@@ -1,6 +1,6 @@
 class MoviePresenter
-
-  delegate :name, to: :@movie
+  include Rails.application.routes.url_helpers
+  delegate :name, :lists, to: :@movie
 
   alias_method :title, :name
 
@@ -19,6 +19,10 @@ class MoviePresenter
 
   def loaded?
     @movie.dataset.present?
+  end
+
+  def path
+    movie_path @movie
   end
 
   private

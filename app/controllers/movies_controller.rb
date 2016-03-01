@@ -20,6 +20,10 @@ class MoviesController < ApplicationController
   def update
   end
 
+  def show
+    @movie = MoviePresenter.new(Movie.by(current_user).find(params[:id]))
+  end
+
   # aka. remove from list
   def destroy
     find_movie
