@@ -4,7 +4,7 @@
 
 <div class="movie">
   <div class="poster">
-    <%= image_tag @movie.poster %>
+    <%= image_tag @movie.poster, class: 'img-responsive poster' %>
   </div>
   <div class="body">
     <h1><%= @movie.title %> <small><%= @movie.tagline %></small></h1>
@@ -22,6 +22,22 @@
     <% else %>
       <p><em><%== t('.movie_being_loaded') %></em></p>
     <% end %>
+    <div class="note-section">
+      <h3><%= t('.your_notes') %></h3>
+      <% if @movie.notes.present? %>
+        <p class="notes"><%=h @movie.notes %></p>
+      <% else %>
+        <p class="notes"><%= t('.no_notes') %></p>
+      <% end %>
+      <div class="notes hidden">
+        <%= form_for(@movie.movie, data: {remote: true}, html: { method: :patch }) do |f| %>
+          <div class="form-group">
+            <%= f.text_area :notes, class: 'form-control', placeholder: t('.add_notes', movie: @movie.title) %>
+          </div>
+          <%= f.submit t('.save_notes'), class: 'btn btn-default', data: { disable_with: t('.saving') } %>
+        <% end %>
+      </div>
+    </div>
     <h3><%= t('.lists') %></h3>
     <ul>
       <% @movie.lists.each do |list| %>

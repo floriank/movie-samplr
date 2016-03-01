@@ -1,8 +1,9 @@
 class MoviePresenter
   include Rails.application.routes.url_helpers
-  delegate :name, :lists, to: :@movie
+  delegate :name, :notes, :lists, to: :@movie
 
   alias_method :title, :name
+  attr_reader :movie
 
   def initialize(movie)
     @movie = movie

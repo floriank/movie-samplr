@@ -21,9 +21,6 @@
       </form>
       <div class="collapse navbar-collapse" id="menu">
         <ul class="nav navbar-nav navbar-right">
-          <li>
-            <%= link_to t('.what_is_this'), '#' %>
-          </li>
           <% if user_signed_in? %>
             <li>
               <%= link_to t('.my_collection'), lists_path %>

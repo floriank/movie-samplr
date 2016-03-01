@@ -67,6 +67,11 @@ en:
     show:
       movie_being_loaded: This movies data is curently being fetched from <a href="http://imdb.com">IMDb</a>
       lists: This movie is in the following lists
+      no_notes: There is no notes for this movie! Click here to add some!
+      add_notes: 'Add notes for "%{movie}" here'
+      your_notes: Your notes
+      save_notes: Save these notes
+      saving: Saving...
   # devise override
   devise:
     registrations:

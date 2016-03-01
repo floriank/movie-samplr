@@ -16,8 +16,13 @@ class MoviesController < ApplicationController
     end
   end
 
-  # aka. copy to list
   def update
+    @movie = Movie.by(current_user).find(params[:id])
+    if @movie.update_attributes(movie_params)
+      respond_to do |format|
+        format.js
+      end
+    end
   end
 
   def show
@@ -38,7 +43,7 @@ class MoviesController < ApplicationController
   private
 
   def movie_params
-    params.require(:movie).permit :imdb_id, :title, :id
+    params.require(:movie).permit :imdb_id, :title, :id, :notes
   end
 
   def list_params

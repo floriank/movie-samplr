@@ -1,3 +1,27 @@
 // Place all the styles related to the Movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'bootstrap/mixins';
+@import 'bootstrap/variables';
+
+.movie {
+  @include make-row();
+  >.poster {
+    @include make-xs-column(12);
+    @include make-md-column(3);
+  }
+
+  > .body {
+    @include make-xs-column(12);
+    @include make-md-column(9);
+  }
+
+  p.notes {
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+
+

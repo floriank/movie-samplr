@@ -10,17 +10,21 @@
 }
 
 .movies {
-
   @include make-row();
-  list-style: none;
-  padding: 0;
+  //list-style: none;
+
 
   > .movie {
     @include make-xs-column(12);
-    @include make-sm-column(4);
+    @include make-sm-column(3);
     @include make-md-column(3);
     @include make-lg-column(2);
 
-    padding: $padding--default;
+    margin: $margin--default;
+    text-align: center;
+
+    .poster {
+      margin: 0 auto;
+    }
   }
 }
