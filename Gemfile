@@ -18,13 +18,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass', '~> 3.3'
 
@@ -57,4 +54,6 @@ group :test do
   gem 'launchy'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
+  gem 'vcr'
+  gem 'webmock'
 end

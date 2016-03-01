@@ -1,0 +1,1187 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/url
+    body:
+      encoding: UTF-8
+      string: '{"url":"http://127.0.0.1:40609/users/sign_in"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '46'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '87'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"get","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":""}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//*[self::input | self::textarea][not(./@type
+        = ''submit'' or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox''
+        or ./@type = ''hidden'' or ./@type = ''file'')][(((./@id = ''user_email''
+        or ./@name = ''user_email'') or ./@placeholder = ''user_email'') or ./@id
+        = //label[normalize-space(string(.)) = ''user_email'']/@for)] | .//label[normalize-space(string(.))
+        = ''user_email'']//.//*[self::input | self::textarea][not(./@type = ''submit''
+        or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox'' or
+        ./@type = ''hidden'' or ./@type = ''file'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '572'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '227'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"findElements","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":[{"ELEMENT":"{226b0753-48a0-4896-8ebe-5949f9d379e0}","element-6066-11e4-a52e-4f735466cecf":"{226b0753-48a0-4896-8ebe-5949f9d379e0}"}]}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7B226b0753-48a0-4896-8ebe-5949f9d379e0%7D/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '104'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"isElementDisplayed","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7B226b0753-48a0-4896-8ebe-5949f9d379e0%7D/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '102'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"isElementEnabled","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7B226b0753-48a0-4896-8ebe-5949f9d379e0%7D/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '106'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"getElementTagName","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":"input"}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7B226b0753-48a0-4896-8ebe-5949f9d379e0%7D/attribute/type
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '108'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"getElementAttribute","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":"email"}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7B226b0753-48a0-4896-8ebe-5949f9d379e0%7D/attribute/readonly
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '105'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"getElementAttribute","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":null}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/execute
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].value = ''''","args":[{"ELEMENT":"{226b0753-48a0-4896-8ebe-5949f9d379e0}","element-6066-11e4-a52e-4f735466cecf":"{226b0753-48a0-4896-8ebe-5949f9d379e0}"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '177'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '99'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"executeScript","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":null}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7B226b0753-48a0-4896-8ebe-5949f9d379e0%7D/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["stan@lee.com"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '26'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '101'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"sendKeysToElement","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":""}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//*[self::input | self::textarea][not(./@type
+        = ''submit'' or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox''
+        or ./@type = ''hidden'' or ./@type = ''file'')][(((./@id = ''user_password''
+        or ./@name = ''user_password'') or ./@placeholder = ''user_password'') or
+        ./@id = //label[normalize-space(string(.)) = ''user_password'']/@for)] | .//label[normalize-space(string(.))
+        = ''user_password'']//.//*[self::input | self::textarea][not(./@type = ''submit''
+        or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox'' or
+        ./@type = ''hidden'' or ./@type = ''file'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '587'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '227'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"findElements","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":[{"ELEMENT":"{e86d84a0-7acf-4644-86c2-5662819b6fcc}","element-6066-11e4-a52e-4f735466cecf":"{e86d84a0-7acf-4644-86c2-5662819b6fcc}"}]}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7Be86d84a0-7acf-4644-86c2-5662819b6fcc%7D/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '104'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"isElementDisplayed","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7Be86d84a0-7acf-4644-86c2-5662819b6fcc%7D/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '102'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"isElementEnabled","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7Be86d84a0-7acf-4644-86c2-5662819b6fcc%7D/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '106'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"getElementTagName","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":"input"}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7Be86d84a0-7acf-4644-86c2-5662819b6fcc%7D/attribute/type
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '111'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"getElementAttribute","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":"password"}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7Be86d84a0-7acf-4644-86c2-5662819b6fcc%7D/attribute/readonly
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '105'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"getElementAttribute","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":null}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/execute
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].value = ''''","args":[{"ELEMENT":"{e86d84a0-7acf-4644-86c2-5662819b6fcc}","element-6066-11e4-a52e-4f735466cecf":"{e86d84a0-7acf-4644-86c2-5662819b6fcc}"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '177'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '99'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"executeScript","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":null}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7Be86d84a0-7acf-4644-86c2-5662819b6fcc%7D/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["stanl3ykubr1k"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '27'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '101'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"sendKeysToElement","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":""}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//a[./@href][(((./@id = ''Log in to continue''
+        or normalize-space(string(.)) = ''Log in to continue'') or ./@title = ''Log
+        in to continue'') or .//img[./@alt = ''Log in to continue''])] | .//input[./@type
+        = ''submit'' or ./@type = ''reset'' or ./@type = ''image'' or ./@type = ''button''][((./@id
+        = ''Log in to continue'' or ./@value = ''Log in to continue'') or ./@title
+        = ''Log in to continue'')] | .//input[./@type = ''image''][./@alt = ''Log
+        in to continue''] | .//button[(((./@id = ''Log in to continue'' or ./@value
+        = ''Log in to continue'') or normalize-space(string(.)) = ''Log in to continue'')
+        or ./@title = ''Log in to continue'')] | .//input[./@type = ''image''][./@alt
+        = ''Log in to continue'']"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '698'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '227'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"findElements","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":[{"ELEMENT":"{184de2f0-b364-49a1-80dd-af98f490e9bf}","element-6066-11e4-a52e-4f735466cecf":"{184de2f0-b364-49a1-80dd-af98f490e9bf}"}]}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7B184de2f0-b364-49a1-80dd-af98f490e9bf%7D/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '104'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"isElementDisplayed","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7B184de2f0-b364-49a1-80dd-af98f490e9bf%7D/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '106'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"getElementTagName","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":"input"}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:52 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7B184de2f0-b364-49a1-80dd-af98f490e9bf%7D/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '102'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:53 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"isElementEnabled","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":true}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:53 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/element/%7B184de2f0-b364-49a1-80dd-af98f490e9bf%7D/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '98'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:53 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"clickElement","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":"ok"}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:53 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/url
+    body:
+      encoding: UTF-8
+      string: '{"url":"http://127.0.0.1:40609/movies/1"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '41'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '87'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:53 GMT
+    body:
+      encoding: UTF-8
+      string: '{"name":"get","sessionId":"89323b71-e1ac-4e41-9e57-dfe9f85b4c47","status":0,"value":""}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:53 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/89323b71-e1ac-4e41-9e57-dfe9f85b4c47/source
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Connection:
+      - close
+      Content-Length:
+      - '13633'
+      Server:
+      - httpd.js
+      Date:
+      - Tue, 01 Mar 2016 21:10:53 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJuYW1lIjoiZ2V0UGFnZVNvdXJjZSIsInNlc3Npb25JZCI6Ijg5MzIzYjcx
+        LWUxYWMtNGU0MS05ZTU3LWRmZTlmODViNGM0NyIsInN0YXR1cyI6MCwidmFs
+        dWUiOiI8IURPQ1RZUEUgaHRtbD5cbjxodG1sIHhtbG5zPVwiaHR0cDovL3d3
+        dy53My5vcmcvMTk5OS94aHRtbFwiPjxoZWFkPlxuICAgIDx0aXRsZT5Nb3Zp
+        ZVNhbXBsciAtIG9yZ2FuaXplIGFuZCBzaGFyZSB5b3VyIG1vdmllcyBvbmxp
+        bmU8L3RpdGxlPlxuICAgICA8bWV0YSBjaGFyc2V0PVwidXRmLThcIiAvPlxu
+        ICAgIDxtZXRhIGNvbnRlbnQ9XCJpZT1lZGdlXCIgaHR0cC1lcXVpdj1cIngt
+        dWEtY29tcGF0aWJsZVwiIC8+XG4gICAgPG1ldGEgY29udGVudD1cIk1vdmll
+        U2FtcGxyIGlzIGEgdG9vbCB0byBvcmdhbml6ZSBtb3ZpZSBvd25lZCBieSB5
+        b3VyIGFuZCBzaGFyZSB0aGVtIGVhc2lseVwiIG5hbWU9XCJkZXNjcmlwdGlv
+        blwiIC8+XG4gICAgPG1ldGEgY29udGVudD1cIndpZHRoPWRldmljZS13aWR0
+        aCwgaW5pdGlhbC1zY2FsZT0xXCIgbmFtZT1cInZpZXdwb3J0XCIgLz5cbiAg
+        ICA8bGluayBocmVmPVwiL2Fzc2V0cy9hcHBsaWNhdGlvbi04OWVmN2JhMTEz
+        Nzk1YzMxYTAxN2MwODQ3MDBmNDAzNDU5NWI5MGE5ZDY1MzliYzIyZjlhNTRk
+        NzFjYTg4N2U5LmNzc1wiIG1lZGlhPVwiYWxsXCIgcmVsPVwic3R5bGVzaGVl
+        dFwiIC8+XG4gICAgXG4gIDwvaGVhZD5cbiAgPGJvZHkgY2xhc3M9XCJib2R5
+        LS1tb3ZpZXMtLXNob3dcIj5cbiAgICAgIDxoZWFkZXI+XG4gIDxuYXYgcm9s
+        ZT1cIm5hdmlnYXRpb25cIiBjbGFzcz1cIm5hdmJhciBuYXZiYXItaW52ZXJz
+        ZSBuYXZiYXItc3RhdGljLXRvcFwiPlxuICA8ZGl2IGNsYXNzPVwiY29udGFp
+        bmVyXCI+XG4gICAgICA8ZGl2IGNsYXNzPVwibmF2YmFyLWhlYWRlclwiPlxu
+        ICAgICAgICA8YnV0dG9uIGRhdGEtdGFyZ2V0PVwiI21lbnVcIiBkYXRhLXRv
+        Z2dsZT1cImNvbGxhcHNlXCIgY2xhc3M9XCJuYXZiYXItdG9nZ2xlIGNvbGxh
+        cHNlZFwiIHR5cGU9XCJidXR0b25cIj5cbiAgICAgICAgICA8c3BhbiBjbGFz
+        cz1cInNyLW9ubHlcIj48c3BhbiB0aXRsZT1cInRyYW5zbGF0aW9uIG1pc3Np
+        bmc6IGVuLmxheW91dHMuYXBwX2hlYWRlci50b2dnbGVfbmF2aWdhdGlvblwi
+        IGNsYXNzPVwidHJhbnNsYXRpb25fbWlzc2luZ1wiPlRvZ2dsZSBOYXZpZ2F0
+        aW9uPC9zcGFuPjwvc3Bhbj5cbiAgICAgICAgICA8c3BhbiBjbGFzcz1cImlj
+        b24tYmFyXCI+PC9zcGFuPlxuICAgICAgICAgIDxzcGFuIGNsYXNzPVwiaWNv
+        bi1iYXJcIj48L3NwYW4+XG4gICAgICAgICAgPHNwYW4gY2xhc3M9XCJpY29u
+        LWJhclwiPjwvc3Bhbj5cbiAgICAgICAgPC9idXR0b24+XG4gICAgICAgIDxh
+        IGhyZWY9XCIvXCIgY2xhc3M9XCJuYXZiYXItYnJhbmRcIj5cbiAgICAgICAg
+        ICA8ZGl2IGNsYXNzPVwibG9nb1wiPlxuICA8c3ZnIHZpZXdCb3g9XCIwIDAg
+        NTM1LjU0Njg3IDExNy4yNDIxOFwiIHhtbG5zOmRjPVwiaHR0cDovL3B1cmwu
+        b3JnL2RjL2VsZW1lbnRzLzEuMS9cIiB4bWxuczpjYz1cImh0dHA6Ly9jcmVh
+        dGl2ZWNvbW1vbnMub3JnL25zI1wiIHZlcnNpb249XCIxLjFcIiB3aWR0aD1c
+        IjE0OS43M21tXCIgaGVpZ2h0PVwiMzEuOTU5bW1cIiB4bWxucz1cImh0dHA6
+        Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgeG1sbnM6cmRmPVwiaHR0cDovL3d3
+        dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zI1wiPlxuICAgPGcg
+        dHJhbnNmb3JtPVwidHJhbnNsYXRlKC0xMjAgLTQzNS42OClcIj5cbiAgICA8
+        Zz5cbiAgICAgPHBhdGggZD1cIm0yMjcuNjIgNDM1LjY4cTcuODEyNSAwIDgu
+        NzUgNy41MzkxdjAuNjI1cTAgMTIuNDYxLTE5LjI5NyAzNy4wN2wtMTIuMzQ0
+        IDE2Ljg3NXEtMTIuNjU2IDE3Ljk2OS0xNC4xOCAyNi4yMTF2MS4yMTA5cTAg
+        NC44NDM4IDYuOTE0MSA0Ljg0MzggNC4wMjM0IDAgMTkuMDIzLTYuMzI4MWgw
+        LjI3MzQ0cTAuNjI1IDAuMDc4MSAwLjYyNSAwLjU4NTkzdjAuMzEyNXEtMS4x
+        NzE5IDMuMjgxMi0xMi45NjkgNy4yMjY2LTQuODQzOCAxLjIxMDktNi45NTMx
+        IDEuMjEwOWgtMi4xMDk0cS02LjgzNTkgMC05LjAyMzQtNS43NDIydi00Ljgw
+        NDdxMi40NjA5LTEyLjQyMiAzMC43NDItNDguMjQyIDE0Ljc2Ni0yMS44MzYg
+        MTQuNzY2LTI5LjI1OHYtMi4xMDk0cTAtMy41OTM4LTMuOTA2Mi0zLjU5Mzgt
+        MTEuMjUgMC0zMi44NTIgMjYuMjExbC0xNC40OTIgMjIuOTNxLTguMDkgMTYu
+        MTItOS42NSAxOC4wOGwtMC41ODU5NCAwLjMxMjVoLTAuMzEyNXEtMy4zMjAz
+        LTAuNDY4NzUtMy4zMjAzLTEuNTIzNHYtMC4zMTI1cTAtMi41MzkxIDE1LjA3
+        OC0yNi44MzYgMC0wLjYyNSAzLjYzMjgtNi45MTQxIDcuNTM5MS0xNC44NDQg
+        Ny41MzkxLTIxLjA5NCAwLTUuMTU2Mi0yLjQyMTktNS4xNTYyLTEzLjI4MSAz
+        LjUxNTYtMzUuNTg2IDM3LjY5NS05LjEwMTYgMTMuMzItMTguMDg2IDI0LjE0
+        MS01LjAzOTEgMy43NS03LjUzOTEgNC4yMTg4aC0yLjY5NTNxLTUuODIwMyAw
+        LTYuNjQwNi04Ljc1di0wLjMxMjVxMC0xMi42MTcgMTIuNjU2LTIxLjk5MiAz
+        LjE2NDEtMS41MjM0IDQuODQzOC0xLjUyMzRoMC4yNzM0NHE2Ljk1MzEgMC42
+        NjQwNiA2Ljk1MzEgNC4yMTg4djAuNjI1cTAgMC41ODU5NC0wLjYyNSAwLjU4
+        NTk0aC0yLjM4MjhxLTEuNjc5Ny0yLjEwOTQtMy4wNDY5LTIuMTA5NGgtMC4y
+        NzM0M3EtNC40NTMxIDAtMTEuNzU4IDExLjE3Mi0yLjQyMTkgNS44OTg0LTIu
+        NDIxOSA4LjcxMDkgMCA0LjA2MjUgMi43MzQ0IDYuMDU0N2gwLjI3MzQzcTMu
+        OTA2MiAwIDE0LjE4LTEzLjI4MSA1Ljk3NjYtOC4wODU5IDE4LjM5OC0yNi41
+        MjMgMTkuNjg4LTI2LjIxMSAyOS44NDQtMjYuMjExaDAuODk4NDNxNi45MTQx
+        IDAgNi45MTQxIDcuNTM5MSAwIDMuMDQ2OS0xLjE3MTkgNy44MTI1djAuMzEy
+        NWgwLjI3MzQ0cTEwLjAzOS0xMi43NzMgMjAuMTk1LTE4LjM5OCA1LjgyMDMt
+        My4wMDc4IDEwLjg1OS0zLjMyMDN6XCIgZmlsbD1cIiNmZmZcIiBzdHJva2U9
+        XCIjZmZmXCIvPlxuICAgICA8cGF0aCBkPVwibTIzOC44IDQ3OC42NXEzLjI4
+        MTIgMCA3LjA3MDMgMi4wMzEyIDMuMzk4NCAyLjk2ODggMy4zOTg0IDcuMDcw
+        M3YzLjU1NDdxLTAuNzAzMTIgNC44NDM4LTIuODkwNiA5LjEwMTYtMi4zMDQ3
+        IDQuMzc1LTYuMjUgOC42MzI4LTUuMjczNCA0Ljc2NTYtOC40Mzc1IDYuNDA2
+        Mi0zLjgyODEgMi4xODc1LTguMjQyMiAyLjE4NzUtNy41IDAtMTAuMTU2LTUu
+        NTg1OS0wLjY2NDA2LTIuNS0wLjY2NDA2LTQuNTMxMiAwLTEwLjM5MSA5LjQ1
+        MzEtMTcuMzgzIDAtMC41NDY4OCA1LjA3ODEtMy4wNDY5IDMuMjQyMi0wLjg1
+        OTM3IDQuNTMxMi0wLjg1OTM3IDQuODgyOCAwIDYuNDA2MiAyLjM4Mjh2MS44
+        MzU5cS0wLjI3MzQ0IDAuNzAzMTItMS4xNzE5IDAuNzAzMTJoLTAuMTU2MjVs
+        LTQuMDYyNS0xLjAxNTZxLTQuNDkyMiAwLTExLjQ4NCA2LjkxNDFsLTMuMDA3
+        OCA0Ljg4MjhxLTEuMzY3MiA0LjI5NjktMS4zNjcyIDUuNzQyMnYwLjY2NDA2
+        cTAuODk4NDQgNS41ODU5IDUuNTg1OSA1LjU4NTloMC4xNTYyNXE1LjM5MDYg
+        MCAxMi44MTItNi45MTQxIDUuODIwMy01LjgyMDMgNi45MTQxLTguOTQ1MyAx
+        LjQwNjItMS42MDE2IDIuNTM5MS02LjYwMTYgMC4xOTUzMS0wLjE5NTMxIDAu
+        MTk1MzEtMS4xNzE5di0yLjE4NzVxLTAuODU5MzctNS44OTg0LTUuOTM3NS01
+        Ljg5ODQtNS4zMTI1IDAtMTYuMDE2IDYuNDA2MmgtMS42Nzk3cS0wLjM1MTU2
+        IDAtMC4zNTE1Ni0wLjM1MTU2di0wLjY2NDA3cTEuMjUtMy40NzY2IDYuNDA2
+        Mi01Ljg5ODQgNi40MDYyLTMuMDQ2OSAxMS4zMjgtMy4wNDY5elwiIGZpbGw9
+        XCIjZmZmXCIgc3Ryb2tlPVwiI2ZmZlwiLz5cbiAgICAgPHBhdGggZD1cIm0y
+        ODUuNDUgNDcyLjQ3aDEuMDkzOHEwLjk3NjU2IDAuNTQ2ODcgMC45NzY1NiAx
+        LjQwNjJ2MC4xNTYyNXEwIDIuMDcwMy0xLjQ0NTMgNC40NTMxIDAgMC4yNzM0
+        NC0yLjE4NzUgNC44ODI4IDAgMC41NDY4OC0zLjQ3NjYgNi45NTMxLTAuODU5
+        MzggMi44NTE2LTMuOTQ1MyA4LjM1OTQgMCAwLjQ2ODc1LTMuMDA3OCA2LjQ4
+        NDRoLTAuNDY4NzV2MC4zMTI1cTAgMS4wNTQ3LTEuNjAxNiAzLjYzMjgtNC4x
+        MDE2IDguNjcxOS03LjU3ODEgOC42NzE5LTMuODY3MiAwLTQuNTcwMy0xLjcx
+        ODgtMi40NjA5LTQuMzc1LTIuODUxNi05LjQ5MjItMC43ODEyNS0yLjg5MDYt
+        MS4yNS0xMS45OTItMC4xNTYyNSAwLTAuMTU2MjUtMC4zMTI1IDAtNi42NDA2
+        IDEuMDkzOC02LjY0MDYgMS4wNTQ3LTAuMzEyNSAxLjQ0NTMtMC4zMTI1aDEu
+        NTYyNXEwLjc4MTI1IDAuMzUxNTYgMC43ODEyNSAwLjc4MTI1IDAgMS43NTc4
+        LTAuMzEyNSA2LjY0MDYgMCAwLjY2NDA2IDAuNjI1IDYuMDE1NnYxLjI1cTEu
+        NDA2MiA5LjU3MDMgMy4wMDc4IDExLjA1NXYwLjMxMjVoMC4xNTYyNXExLjUy
+        MzQtMS4zMjgxIDUuMjM0NC04LjA0NjkgMS44MzU5LTQuMjU3OCAyLjE4NzUt
+        NC4yNTc4bDIuMDcwMy00LjQ1MzFxMi4xODc1LTMuOTg0NCAyLjE4NzUtNC40
+        MTQxIDEuMDU0Ny0xLjcxODggMi4wNzAzLTQuNDE0MSAxLjE3MTktMS4yODkx
+        IDIuMDMxMi0zLjYzMjggMy44MjgxLTcuNjE3MiA2LjMyODEtMTEuNjh6XCIg
+        ZmlsbD1cIiNmZmZcIiBzdHJva2U9XCIjZmZmXCIvPlxuICAgICA8cGF0aCBk
+        PVwibTMxMy42NiA0NDkuNjJxNC45MjE5IDAgNi45MTQxIDUuNjI1IDAuMTU2
+        MjUgMS4zNjcyIDAuMTU2MjUgMS42MDE2IDAgNC42NDg0LTUuMTU2MiA2Ljcx
+        ODgtMS40MDYyIDAuMzEyNS0yLjA3MDMgMC4zMTI1LTQuODQzOCAwLTYuNzE4
+        OC01LjI3MzQtMC4xNTYyNS0wLjE1NjI1LTAuMzEyNS0yLjEwOTQgMC00LjI5
+        NjkgNC44MDQ3LTYuNDA2MiAwLjU4NTkzLTAuMzUxNTYgMi4zODI4LTAuNDY4
+        NzV6bS0xNS43ODEgMjkuMDIzaDAuNjI1cTEuNzU3OCAwIDEuNzU3OCAxLjk1
+        MzEtMC4yMzQzNyAxLjQwNjItMy4wNDY5IDYuMDU0Ny04LjUxNTYgMTQuMjE5
+        LTguNjMyOCAyMS43OTd2MC40Njg3NXEwIDMuNTkzOCAzLjY3MTkgNS4zMTI1
+        IDEuMTMyOCAwLjgyMDMxIDEuMTMyOCAxLjYwMTZ2MS4yODkxcS0wLjI3MzQ0
+        IDAuNjI1LTEuMTMyOCAwLjYyNWgtMi4wNzAzcS0wLjYyNS0wLjU0Njg3LTIu
+        NTc4MS0xLjQ0NTMtMy41MTU2LTIuNzM0NC0zLjUxNTYtNy4zODI4di0wLjYy
+        NXEwLTcuNSA4LjMyMDMtMjEuNzk3IDQuMDIzNC02LjQ4NDQgNS40Njg4LTcu
+        ODUxNnpcIiBmaWxsPVwiI2ZmZlwiIHN0cm9rZT1cIiNmZmZcIi8+XG4gICAg
+        IDxwYXRoIGQ9XCJtMzM2LjcxIDQ3OC44NHE0LjMzNTkgMCA1LjUwNzggMy41
+        OTM4djEuNDQ1M3EwIDIuNjk1My03LjY1NjIgOS40NTMxLTcuNSA2LjE3MTkt
+        MTMuNjMzIDYuMTcxOWgtMi43NzM0cS0yLjMwNDcgMC0zLjQzNzUtMS45NTMx
+        di0xLjMyODFxMC0wLjIzNDM4IDAuNjY0MDYtMC42MjVoMS4yODkxcTAuNjY0
+        MDcgMCAyLjE0ODQgMC4zMTI1IDMuMzU5NCAwIDkuNDE0MS0zLjc1IDkuMTAx
+        Ni03LjE4NzUgOS4xMDE2LTkuNzI2Ni0wLjE1NjI1IDAtMC4xNTYyNS0wLjE5
+        NTMxLTEwLjM1MiAwLjg5ODQ0LTIxLjc5NyAxMC4xMTctMS4yMTA5IDAuODk4
+        NDQtMi43NzM0IDIuODkwNi0wLjYyNSAwLjExNzE5LTQuMjE4OCA1LjA3ODEt
+        NS41MDc4IDguMzU5NC01LjUwNzggMTEuMDU1LTAuMTk1MzEgMC0wLjE5NTMx
+        IDAuMzEyNSAwLjM1MTU2IDIuNDIxOSAxLjc5NjkgMi40MjE5IDUuODIwMy0w
+        LjAzOTEgMjAtOC43NWgxLjQ4NDRxMC42MjUgMC4xOTUzMSAwLjYyNSAxLjQ0
+        NTN2MC4xNTYyNXEwIDIuNTM5MS0xMi4wMzEgOC43ODkxLTQuNTMxMiAxLjk1
+        MzEtOC4xMjUgMS45NTMxaC0wLjQ2ODc1cS02LjEzMjggMC03LjUtNC44ODI4
+        bC0wLjE1NjI1LTEuNjQwNnEwLTQuNDE0MSA1LjE5NTMtMTEuNjggOC4wMDc4
+        LTEyLjMwNSAyMi40NjEtMTguMzk4IDIuNzczNC0xLjE3MTkgOC45NDUzLTIu
+        MjY1NmgxLjc5Njl6XCIgZmlsbD1cIiNmZmZcIiBzdHJva2U9XCIjZmZmXCIv
+        PlxuICAgICA8cGF0aCBkPVwibTQwOS44OCA0MzUuNzlxOS40MTQxIDAgMTIu
+        MTQ4IDYuNTYyNSAwLjMxMjUgMS4yNSAwLjMxMjUgMi42MTcydjEuOTUzMXEw
+        IDYuNDQ1My0xMy40MzggMTguMzk4aC0yLjMwNDdxLTEuNzU3OCAwLTIuMzA0
+        Ny0xLjMyODF2LTEuNjQwNnExMy43ODktMTIuMTg4IDEzLjc4OS0xOC4zNTkg
+        MC0zLjIwMzEtNy44OTA2LTQuMjU3OC05Ljc2NTYgMC0yMS45NTMgOC44Mjgx
+        LTkuMTc5NyA4LjA4NTktOS4xNzk3IDEzLjc4OSAwIDYuNTYyNSAxOC42NzIg
+        MTMuNzg5IDE0LjQ1MyA3LjE4NzUgMTQuNDUzIDE4LjA0NyAwIDkuOTYwOS0x
+        NC43NjYgMjAuOTc3LTEwLjI3MyA2LjU2MjUtMjQuNjA5IDYuNTYyNWgtMi4z
+        MDQ3cS04LjU5MzggMC0xNy42OTUtNC45MjE5LTkuODQzOC02Ljg3NS05Ljg0
+        MzgtMTYuNzE5di0wLjM1MTU2cTAtMTQuODQ0IDE4LjcxMS0yNC45MjIgNi41
+        MjM0LTMuMjgxMiAxMi43NzMtMy4yODEyaDQuOTIxOXEtNC41NzAzLTQuODQz
+        OC00LjU3MDMtOS44NDM4di0wLjYyNXEwLTEyLjYxNyAyMi45My0yMy4zMiA1
+        LjkzNzUtMS45NTMxIDEyLjE0OC0xLjk1MzF6bS02Mi42NTYgNjMuOTQ1cTAg
+        MTMuOTA2IDIwIDE4LjA0NyAxLjgzNTkgMCA0LjYwOTQgMC4zNTE1NiAxOS4z
+        NzUgMCAzMi40NjEtMTYuNDA2IDIuOTY4OC00LjQ1MzEgMy42MzI4LTguMjAz
+        MSAwLTkuMzc1LTE3LjczNC0xNi4wOTQgMC0wLjMxMjUtMS42NDA2LTAuOTc2
+        NTZ2MC4zNTE1NnEyLjYxNzIgMi40MjE5IDIuNjE3MiA5LjE3OTcgMCA1LjU0
+        NjktNC45MjE5IDguNTE1NmgtMS4yODkxcS0wLjY2NDA3IDAtMC42NjQwNy0w
+        LjY2NDA3di0wLjk3NjU2cTIuNjE3Mi02LjAxNTYgMi42MTcyLTguODY3MiAw
+        LTcuNDYwOS0xMC41MDgtOC44MjgxLTguMDA3OCAwLTE4LjY3MiA3Ljg1MTYt
+        MTAuNTA4IDkuNDE0MS0xMC41MDggMTYuNzE5elwiIGZpbGw9XCIjZmZmXCIg
+        c3Ryb2tlPVwiI2ZmZlwiLz5cbiAgICAgPHBhdGggZD1cIm00NTcuNTEgNDc1
+        LjQ0cTYuMDkzOCAwIDcuMzgyOCAxLjg3NXYxLjIxMDlsLTAuMTU2MjUgMC4z
+        NTE1Ny0yLjA3MDMtMC4xNTYyNWgtMi4yMjY2cS05LjQ1MzEgMC0yMC43ODEg
+        Ny44OTA2LTEzLjYzMyA5Ljc2NTYtMTcuNTM5IDIwLjYyNWwtMC4xNTYyNSAx
+        LjcxODh2MC4xNTYyNXEwIDAuOTM3NSAxLjE3MTkgMS44NzUgNi44NzUgMCAx
+        Ny41MzktOS43NjU2IDAuNjY0MDctMC41MDc4MiAzLjQzNzUtNSA3LjEwOTQt
+        OC4zNTk0IDkuNjA5NC05LjEwMTYgMC41ODU5NC0wLjM1MTU2IDEuMDU0Ny0w
+        LjM1MTU2aDAuNjY0MDZxMi45Mjk3IDAuNzAzMTMgMi45Mjk3IDIuNDIxOXYw
+        LjUwNzgxcTAgMS41MjM0LTExLjUyMyAxMi4zODMtMy4wODU5IDMuMjgxMi0z
+        LjA4NTkgOC45MDYydjAuMTk1MzFxMCA0LjU3MDMgMy43ODkxIDUuMzEyNWgw
+        LjUwNzgycTQuNDUzMSAwIDE0LjYwOS00LjgwNDdoMC42NjQwNnExLjA1NDcg
+        MC4xNTYyNSAxLjA1NDcgMC41MDc4MXYxLjAxNTZxLTIuMTA5NCAyLjY5NTMt
+        NS42NjQxIDQuMjk2OS00Ljg0MzggMi40MjE5LTguNTkzOCAyLjQyMTloLTIu
+        MDcwM3EtMy4zMjAzIDAtNy4zODI4LTQuMTQwNi0xLjU2MjUtMy4yMDMxLTEu
+        NTYyNS01LjgyMDN2LTEuMDE1NmgtMC4xNTYyNXEtNy42NTYyIDUuNDY4OC0x
+        My4yNDIgNS40Njg4LTUuNjI1IDAtNy43MzQ0LTMuOTQ1My0wLjE1NjI1LTAu
+        ODk4NDQtMC4xNTYyNS0xLjcxODh2LTEuMDE1NnEwLTYuODM1OSAxMC40Njkt
+        MTcuNTM5IDE2LjY0MS0xNC43NjYgMjkuMjE5LTE0Ljc2NnpcIiBmaWxsPVwi
+        I2ZmZlwiIHN0cm9rZT1cIiNmZmZcIi8+XG4gICAgIDxwYXRoIGQ9XCJtNDk0
+        LjY2IDQ3OC40OXEzLjQzNzUgMCA3LjU3ODEgMS44MzU5IDQuMjE4OCAyLjg1
+        MTYgNC4yMTg4IDYuNzU3OCAwLjE5NTMxIDAgMC4zNTE1NiAxLjY3OTdoMC4x
+        NTYyNXE1LjU4NTktNC4zNzUgMTEuOTkyLTcuMjI2NiAyLjYxNzItMS4zNjcy
+        IDguMjgxMi0yLjIyNjYgNS4xOTUzIDAgOC4wODU5IDEuNzE4OCAzLjcxMDkg
+        Mi40MjE5IDMuNzEwOSA2LjU2MjUgMCA3LjQ2MDktOC4wODU5IDE1LjE5NSAw
+        IDAuNTQ2ODctMy4wNDY5IDMuMDQ2OS02LjU2MjUgNS44NTk0LTExLjMyOCA4
+        LjQzNzUtNC44ODI4IDMuMzU5NC04Ljc1IDMuMzU5NGgtMC44NTkzN3EtMi42
+        OTUzLTAuMTE3MTktMi42OTUzLTEuMDE1NnYtMS4wMTU2cTAtMC4zOTA2MyAy
+        LjE4NzUtMS4wMTU2IDQuODQzOC0yLjIyNjYgOS45NjA5LTUuNzQyMiA1LjE5
+        NTMtMy43NSA1LjIzNDQtNC4yMTg4IDQuMjU3OC0zLjI0MjIgOC43ODkxLTgu
+        OTQ1MyAzLjUxNTYtNS4xNTYyIDMuNTE1Ni04LjA4NTl2LTAuODU5MzdxMC0z
+        LjIwMzEtMy43MTA5LTMuMjAzMS04LjI0MjIgMC0yMC4yMzQgOS42NDg0LTUu
+        MjczNCA0LjQxNDEtNS44OTg0IDYuNzE4OC0xLjY3OTcgMy42MzI4LTYuNjAx
+        NiAxMC45NzdoLTAuODIwMzFxLTIuNzczNCAwLTQuMjE4OC0yLjg1MTZ2LTAu
+        MTk1MzFxMC0zLjc4OTEgOC4yNDIyLTEzLjQ3NyAxLjAxNTYtMy4zOTg0IDEu
+        MDE1Ni02LjI1IDAtMy43ODkxLTMuMjAzMS01LjIzNDQtMS4wOTM4LTAuMTU2
+        MjUtMi4xODc1LTAuMTU2MjUtMy43NSAwLTEwLjExNyAyLjg1MTYtMy41NTQ3
+        IDEuOTkyMi03LjI2NTYgNS4yMzQ0bC00LjM3NSA0Ljg4MjhxLTYuMjUgOS4z
+        NzUtNi4yNSAxMS4xNzItMC41ODU5NCAxLjE3MTktMS41MjM0IDEuMTcxOWgt
+        MC41MDc4MXEtMS4yMTA5IDAtMi4xODc1LTEuMTcxOXYtMC4xOTUzMnEwLTYu
+        NDQ1MyA3LjkyOTctMTYuMzY3IDguNzUtOS4zMzU5IDE3LjIyNy0xMC45Nzds
+        NS4zOTA2LTAuODIwMzF6XCIgZmlsbD1cIiNmZmZcIiBzdHJva2U9XCIjZmZm
+        XCIvPlxuICAgICA8cGF0aCBkPVwibTU3Ny4wMiA0NzguOHE2LjY0MDYgMCA5
+        LjcyNjYgNS4yNzM0IDAuNjI1IDEuMzI4MSAxLjEzMjggNC4xMDE2djEuODM1
+        OXEwIDkuOTYwOS03LjczNDQgMTguNTk0LTQuNDUzMSA0LjY4NzUtOS42ODc1
+        IDcuMjI2Ni0zLjk4NDQgMS45OTIyLTkuNzI2NiAxLjk5MjJoLTAuODIwMzFx
+        LTYuMjEwOSAwLTcuODkwNi00Ljk2MDktMC4xNTYyNS0wLjg1OTM3LTAuMTU2
+        MjUtMS45NTMxdi0yLjVxMS4xMzI4LTUuMjM0NCAyLjkyOTctNi40MDYyaDAu
+        ODU5MzhxMS42NDA2IDAgMS42NDA2IDEuMzI4MXYxLjMyODFxMCAwLjYyNS0w
+        LjgyMDMxIDQuNjA5NC0wLjE5NTMxIDAuNzgxMjUtMC4xOTUzMSAyLjEwOTQg
+        MS4wNTQ3IDIuOTY4OCA0LjI5NjkgMi45Njg4IDUuMzUxNi0wLjUwNzgyIDEw
+        Ljg1OS00LjI1NzggNi4yODkxLTQuOTIxOSA4LjkwNjItOS44ODI4IDIuOTI5
+        Ny01LjcwMzEgMi45Mjk3LTEwLjcwM3YtMC41MDc4MnEwLTMuOTQ1My0zLjk0
+        NTMtNi4wOTM4LTEuMzI4MS0wLjMxMjUtMS42NDA2LTAuMzEyNWgtMS4zMjgx
+        cS0yLjc3MzQgMC05LjIxODggNC4xMDE2bC01LjIzNDQgMy45NDUzcS03Ljc3
+        MzQgNy41NzgxLTEwLjcwMyAxMS41MjMtOS43MjY2IDEyLjc3My0xMy42NzIg
+        MjEuNDA2LTQuMzc1IDcuMTg3NS04LjkwNjIgMTkuOTIyLTEuNTIzNCA1LTEu
+        Nzk2OSA1LjExNzItMC43MDMxMiAwLjMxMjUtMi42MTcyIDAuMzEyNWgtMC42
+        NjQwNnEtMC4yNzM0NCAwLTAuNjY0MDYtMC42NjQwNnYtMS40ODQ0cTAuMzkw
+        NjItNC45NjA5IDYuNDA2Mi0xOC4yNDIgNy4yNjU2LTE1IDE1LjgyLTI2LjM2
+        NyAyLjE0ODQtMi45Njg4IDUuOTM3NS03LjM4MjggNS42NjQxLTYuNDA2MiAx
+        MS44MzYtMTEuMDU1IDcuMzQzOC00LjkyMTkgMTMuODI4LTQuOTIxOWgwLjMx
+        MjV6XCIgZmlsbD1cIiNmZmZcIiBzdHJva2U9XCIjZmZmXCIvPlxuICAgICA8
+        cGF0aCBkPVwibTYyMC40MiA0MzcuNzloMC44MjAzMnEwLjM1MTU2IDAuMDM5
+        MSAwLjM1MTU2IDAuMzUxNTZ2MC42NjQwNmwtMC4xOTUzMSAwLjM1MTU2cTAu
+        MjczNDMgMCAwLjUwNzgxIDAuNTA3ODJ2MC40Njg3NXEwIDAuNTA3ODEtMS4x
+        NzE5IDIuNTM5MSAwIDAuNDI5NjktMi41MzkxIDQuNzI2Ni03LjE4NzUgMTIu
+        MTA5LTEwLjI3MyAxOS4yNTgtNC40MTQxIDguOTA2Mi03LjI2NTYgMTguOTA2
+        LTAuMjczNDQgMC0xLjUyMzQgNS41NDY5LTAuNDI5NjkgMi4wMzEyLTAuNjY0
+        MDYgMi4wMzEyIDAgMC4xOTUzMSAwLjE1NjI1IDAuMTk1MzEtMS41MjM0IDYu
+        NjQwNi0xLjUyMzQgMTMuNjMzIDAuNzgxMjUgNS4xOTUzIDIuNTM5MSA3LjEw
+        OTQgMC42NjQwNyAwIDAuNjY0MDcgMS44MzU5djAuODU5MzdxMCAxLjAxNTYt
+        My43MTA5IDEuMDE1Ni0xLjQ4NDQtMC40Mjk2OS0yLjY5NTMtMy4wNDY5LTEu
+        Njc5Ny00LjUzMTItMS42Nzk3LTcuNzczNCAwLTcuNzM0NCAzLjIwMzEtMjAu
+        MDc4bDEuNjc5Ny01LjIzNDQgMi4zODI4LTYuOTE0MXEzLjM1OTQtOC4yNDIy
+        IDguMDg1OS0xNy42OTUgMC4zNTE1Ni0wLjI3MzQ0IDMuMzk4NC02LjA5Mzgg
+        MS43NTc4LTIuOTY4OCAzLjAwNzgtNC41NzAzIDAtMC40Mjk2OSAyLjY5NTMt
+        NC4yMTg4IDIuMDcwMy0zLjM5ODQgMy43NS00LjM3NXpcIiBmaWxsPVwiI2Zm
+        ZlwiIHN0cm9rZT1cIiNmZmZcIi8+XG4gICAgIDxwYXRoIGQ9XCJtNjQwLjcg
+        NDc4LjkyaDEuOTUzMXExLjk1MzEgMCA1LjU0NjkgMS43OTY5IDIuMzQzOCAy
+        LjM0MzggMi4zNDM4IDMuOTQ1M3YxLjI1cTAgMS45OTIyLTEuMDU0NyAyLjY5
+        NTNoLTEuMjg5MXEtMC40Njg3NS0wLjExNzE5LTIuNjU2Mi0zLjk0NTMtMi4w
+        MzEyLTEuODM1OS0zLjM5ODQtMS45NTMxaC0xLjI1cS0yLjA3MDMgMC01LjM5
+        MDYgMS42MDE2LTMuMTI1IDEuMjEwOS04LjA0NjkgNi4wOTM4LTcuMzQzOCA3
+        LjgxMjUtMTEuODM2IDE3LjczNGwtMy45NDUzIDguNTkzOHEtMC43ODEyNSAx
+        LjA1NDctMi4zMDQ3IDEuMDU0N2gtMC4xOTUzMXEtMi44NTE2IDAtMi44NTE2
+        LTEuNjAxNnYtMC41NDY4N3E2LjMyODEtMTYuMDk0IDExLjY0MS0yMi4xODgg
+        MS40NDUzLTIuMzA0NyA0LjEwMTYtNS4wMzkxIDUuNDI5Ny01LjY2NDEgMTAu
+        NzQyLTcuODUxNiAzLjEyNS0xLjI1IDcuODkwNi0xLjY0MDZ6XCIgZmlsbD1c
+        IiNmZmZcIiBzdHJva2U9XCIjZmZmXCIvPlxuICAgIDwvZz5cbiAgIDwvZz5c
+        biAgPC9zdmc+XG48L2Rpdj5cblxuPC9hPiAgICAgIDwvZGl2PlxuXG4gICAg
+        ICA8Zm9ybSByb2xlPVwic2VhcmNoXCIgbWV0aG9kPVwiZ2V0XCIgYWN0aW9u
+        PVwiL3NlYXJjaFwiIGNsYXNzPVwibmF2YmFyLWZvcm0gbmF2YmFyLXJpZ2h0
+        XCI+XG4gICAgICAgIDxkaXYgY2xhc3M9XCJmb3JtLWdyb3VwXCI+XG4gICAg
+        ICAgICAgPGlucHV0IHR5cGU9XCJ0ZXh0XCIgY2xhc3M9XCJmb3JtLWNvbnRy
+        b2xcIiBwbGFjZWhvbGRlcj1cIldoYXQncyB5b3VyIGZhdm91cml0ZSBnZW5y
+        ZT9cIiB2YWx1ZT1cIlwiIG5hbWU9XCJtXCIgLz5cbiAgICAgICAgPC9kaXY+
+        XG4gICAgICAgIDxidXR0b24gY2xhc3M9XCJidG4gYnRuLWRlZmF1bHQgc3It
+        b25seVwiIHR5cGU9XCJzdWJtaXRcIj5TZWFyY2g8L2J1dHRvbj5cbiAgICAg
+        IDwvZm9ybT5cbiAgICAgIDxkaXYgaWQ9XCJtZW51XCIgY2xhc3M9XCJjb2xs
+        YXBzZSBuYXZiYXItY29sbGFwc2VcIj5cbiAgICAgICAgPHVsIGNsYXNzPVwi
+        bmF2IG5hdmJhci1uYXYgbmF2YmFyLXJpZ2h0XCI+XG4gICAgICAgICAgICA8
+        bGk+XG4gICAgICAgICAgICAgIDxhIGhyZWY9XCIvbGlzdHNcIj5NeSBtb3Zp
+        ZSBjb2xsZWN0aW9uPC9hPlxuICAgICAgICAgICAgPC9saT5cbiAgICAgICAg
+        ICAgIDxsaT5cbiAgICAgICAgICAgICAgPGEgaHJlZj1cIi91c2Vycy9zaWdu
+        X291dFwiIGRhdGEtbWV0aG9kPVwiZGVsZXRlXCIgcmVsPVwibm9mb2xsb3dc
+        Ij48c3BhbiB0aXRsZT1cInRyYW5zbGF0aW9uIG1pc3Npbmc6IGVuLmxheW91
+        dHMuYXBwX2hlYWRlci5sb2dvdXRcIiBjbGFzcz1cInRyYW5zbGF0aW9uX21p
+        c3NpbmdcIj5Mb2dvdXQ8L3NwYW4+PC9hPlxuICAgICAgICAgICAgPC9saT5c
+        biAgICAgICAgPC91bD5cbiAgICAgIDwvZGl2PlxuICAgIDwvZGl2PlxuICA8
+        L25hdj5cbjwvaGVhZGVyPlxuXG5cbiAgICA8ZGl2IGNsYXNzPVwiY29udGFp
+        bmVyXCI+XG4gICAgICBcbjxkaXYgY2xhc3M9XCJtb3ZpZVwiPlxuICA8ZGl2
+        IGNsYXNzPVwicG9zdGVyXCI+XG4gICAgPGltZyBhbHQ9XCJEZWZhdWx0IHBv
+        c3RlciBhOGE5NjFjZTkzNzIyNjNhYTZkMzM5YWRkYjFiMmM5ZmM0Njc5ZGYz
+        OGJmMjIwOTkwMDQ4OTgyYjM4MjIyZTg1XCIgc3JjPVwiL2Fzc2V0cy9kZWZh
+        dWx0X3Bvc3Rlci1hOGE5NjFjZTkzNzIyNjNhYTZkMzM5YWRkYjFiMmM5ZmM0
+        Njc5ZGYzOGJmMjIwOTkwMDQ4OTgyYjM4MjIyZTg1LnBuZ1wiIGNsYXNzPVwi
+        aW1nLXJlc3BvbnNpdmUgcG9zdGVyXCIgLz5cbiAgPC9kaXY+XG4gIDxkaXYg
+        Y2xhc3M9XCJib2R5XCI+XG4gICAgPGgxPlp3ZWkgd2llIFBlY2ggdW5kIFNj
+        aHdlZmVsIDxzbWFsbD48L3NtYWxsPjwvaDE+XG4gICAgICA8cD48ZW0+VGhp
+        cyBtb3ZpZXMgZGF0YSBpcyBjdXJlbnRseSBiZWluZyBmZXRjaGVkIGZyb20g
+        PGEgaHJlZj1cImh0dHA6Ly9pbWRiLmNvbVwiPklNRGI8L2E+PC9lbT48L3A+
+        XG4gICAgPGRpdiBjbGFzcz1cIm5vdGUtc2VjdGlvblwiPlxuICAgICAgPGgz
+        PllvdXIgbm90ZXM8L2gzPlxuICAgICAgICA8cCBjbGFzcz1cIm5vdGVzXCI+
+        VGhlcmUgaXMgbm8gbm90ZXMgZm9yIHRoaXMgbW92aWUhIENsaWNrIGhlcmUg
+        dG8gYWRkIHNvbWUhPC9wPlxuICAgICAgPGRpdiBjbGFzcz1cIm5vdGVzIGhp
+        ZGRlblwiPlxuICAgICAgICA8Zm9ybSBtZXRob2Q9XCJwb3N0XCIgYWNjZXB0
+        LWNoYXJzZXQ9XCJVVEYtOFwiIGFjdGlvbj1cIi9tb3ZpZXMvMVwiIGRhdGEt
+        cmVtb3RlPVwidHJ1ZVwiIGlkPVwiZWRpdF9tb3ZpZV8xXCIgY2xhc3M9XCJl
+        ZGl0X21vdmllXCI+PGlucHV0IHR5cGU9XCJoaWRkZW5cIiB2YWx1ZT1cIuKc
+        k1wiIG5hbWU9XCJ1dGY4XCIgLz48aW5wdXQgdHlwZT1cImhpZGRlblwiIHZh
+        bHVlPVwicGF0Y2hcIiBuYW1lPVwiX21ldGhvZFwiIC8+XG4gICAgICAgICAg
+        PGRpdiBjbGFzcz1cImZvcm0tZ3JvdXBcIj5cbiAgICAgICAgICAgIDx0ZXh0
+        YXJlYSBpZD1cIm1vdmllX25vdGVzXCIgbmFtZT1cIm1vdmllW25vdGVzXVwi
+        IHBsYWNlaG9sZGVyPVwiQWRkIG5vdGVzIGZvciAmcXVvdDtad2VpIHdpZSBQ
+        ZWNoIHVuZCBTY2h3ZWZlbCZxdW90OyBoZXJlXCIgY2xhc3M9XCJmb3JtLWNv
+        bnRyb2xcIj48L3RleHRhcmVhPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAg
+        ICAgIDxpbnB1dCB0eXBlPVwic3VibWl0XCIgZGF0YS1kaXNhYmxlLXdpdGg9
+        XCJTYXZpbmcuLi5cIiBjbGFzcz1cImJ0biBidG4tZGVmYXVsdFwiIHZhbHVl
+        PVwiU2F2ZSB0aGVzZSBub3Rlc1wiIG5hbWU9XCJjb21taXRcIiAvPlxuPC9m
+        b3JtPiAgICAgIDwvZGl2PlxuICAgIDwvZGl2PlxuICAgIDxkaXYgaWQ9XCJs
+        aXN0LXJlbW92YWxcIj5cbiAgPGgzPlRoaXMgbW92aWUgaXMgb24gdGhlc2Ug
+        bGlzdHM8L2gzPlxuICA8dWw+XG4gICAgICA8bGk+XG4gICAgICAgICAgPGEg
+        aHJlZj1cIi9saXN0c19tb3ZpZXMvMS8xXCIgZGF0YS1tZXRob2Q9XCJkZWxl
+        dGVcIiBkYXRhLXJlbW90ZT1cInRydWVcIj5NeSBtb3ZpZXM8L2E+XG4gICAg
+        ICA8L2xpPlxuICA8L3VsPlxuPC9kaXY+XG5cbiAgICA8ZGl2IGlkPVwibGlz
+        dC1hZGRcIj5cbjwvZGl2PlxuXG4gIDwvZGl2PlxuPC9kaXY+XG5cbiAgICA8
+        L2Rpdj5cbiAgICBcbiAgICA8c2NyaXB0IHNyYz1cIi9hc3NldHMvYXBwbGlj
+        YXRpb24tODM4NWM1YjgyODIwNjA3NDM1MzQ5MTZkYWZkNGQ4ZWQ3ZTlmNjAz
+        YzA3MDRjOTc0NjA4MDMzYTU1Y2I1ZWRkMS5qc1wiPjwvc2NyaXB0PlxuICAg
+        IDxzY3JpcHQ+XG4vLyZsdDshW0NEQVRBW1xuJC5meC5vZmYgPSB0cnVlO1xu
+        Ly9dXSZndDtcbjwvc2NyaXB0PlxuICBcblxuPC9ib2R5PjwvaHRtbD4ifQ==
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 21:10:53 GMT
+recorded_with: VCR 3.0.1
