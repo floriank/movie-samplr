@@ -1,3 +1,4 @@
+<% full_mode ||= false %>
 <div class="list" id="list-<%= list.id %>">
   <h2>
     <%= list.name %>
@@ -10,11 +11,13 @@
   </h2>
   <ul class="movies">
     <% if list.movies.any? %>
-      <% presentable_movies(list).each do |movie| %>
+      <% presentable_movies(list, full_mode).each do |movie| %>
         <%= render partial: 'movie', locals: { movie: movie } %>
       <% end %>
-      <% if show_more_link?(list) %>
-        <li class="movie more"><%= t('.more') %></li>
+      <% if show_more_link?(list) && !full_mode %>
+        <li class="movie more">
+          <%= link_to t('.more'), list_path(list) %>
+        </li>
       <% end %>
     <% end %>
   </ul>

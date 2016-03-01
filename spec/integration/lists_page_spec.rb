@@ -24,21 +24,35 @@ describe ListsPage do
     end
 
     describe 'movie list' do
-
-      it 'shows a list of movies underneath' do
-        4.times do |n|
-          create :movie, name: "Movie ##{n}", user: user, lists: [user.lists.default]
-          expect(page).to have_content "Movie ##{n}"
+      before do
+        Movie::MAX_DISPLAY.times do |n|
+          user.lists.default.movies << create(:movie, name: "Movie #{n}")
         end
       end
 
-      it 'shows 5 movies at maximum' do
-        12.times do |n|
-          create :movie, name: "Movie ##{n}", user: user, lists: [user.lists.default]
+      it 'shows the movies' do
+        page.go_to_collection
+        Movie::MAX_DISPLAY.times do |n|
+          expect(page).to have_content "Movie #{n}"
         end
-        (6..12).each do |n|
-          expect(page).not_to have_content "Movie ##{n}"
-        end
+      end
+
+      it 'shows only a limited list' do
+        user.lists.default.movies << create(:movie, name: 'Notting Hill')
+        page.go_to_collection
+
+        expect(page).not_to have_content "Movie #{Movie::MAX_DISPLAY}"
+      end
+    end
+  end
+
+  describe '#show' do
+    it 'shows the full list of movies' do
+      (Movie::MAX_DISPLAY + 1).times do
+        user.lists.default << create(:movie, name: "Movie ##{n}")
+      end
+      (Movie::MAX_DISPLAY + 1).times do |n|
+        expect(page).to have_content "Movie ##{n}"
       end
     end
   end

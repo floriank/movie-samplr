@@ -15,6 +15,12 @@ RSpec.describe ListsHelper, type: :helper do
       (Movie::MAX_DISPLAY + 1).times { |n| list.movies << create(:movie) }
       expect(presentable_movies(list).length).to eql Movie::MAX_DISPLAY
     end
+
+    it 'ignores the limit if told' do
+      (Movie::MAX_DISPLAY + 1).times { |n| list.movies << create(:movie) }
+      # plus 2 because there was already a movie in the list
+      expect(presentable_movies(list, true).length).to eql (Movie::MAX_DISPLAY + 2)
+    end
   end
 
   describe '#show_more_link?' do
@@ -24,6 +30,11 @@ RSpec.describe ListsHelper, type: :helper do
 
     it "returns true if the list of movies is longer than #{Movie::MAX_DISPLAY}" do
       (Movie::MAX_DISPLAY + 1).times { |n| list.movies << create(:movie) }
+      expect(show_more_link?(list)).to be_truthy
+    end
+
+    it "returns false if the list has exactly #{Movie::MAX_DISPLAY} entries" do
+      (Movie::MAX_DISPLAY).times { |n| list.movies << create(:movie) }
       expect(show_more_link?(list)).to be_truthy
     end
   end

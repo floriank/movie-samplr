@@ -17,6 +17,12 @@ class ListsController < ApplicationController
     end
   end
 
+  def show
+    @list = List.for(current_user).find params[:id]
+  rescue
+    redirect_to lists_path
+  end
+
   def edit
     @list = List.for(current_user).find(params[:id])
   rescue
