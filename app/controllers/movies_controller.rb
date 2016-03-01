@@ -41,6 +41,7 @@ class MoviesController < ApplicationController
 
   def add_to_list
     find_movie_and_list
+
     respond_to do |format|
       format.js do
         AddMovieToList.for(title: @movie.name, list: @list, imdb_id: @movie.imdb_id, user: current_user)
@@ -48,6 +49,8 @@ class MoviesController < ApplicationController
         render :lists_update
       end
     end
+  rescue
+    render json: {}, status: :unprocessable_entity
   end
 
   def delete_from_list
@@ -60,6 +63,8 @@ class MoviesController < ApplicationController
         render :lists_update
       end
     end
+  rescue
+    render json: {}, status: :unprocessable_entity
   end
 
   private

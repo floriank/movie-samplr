@@ -43,7 +43,65 @@ RSpec.describe MoviesController, type: :controller do
     end
 
     describe '#destroy' do
-      it 'removes a movie from a given list' do
+      let(:movie) { create :movie, user: user, lists: [list] }
+      let(:list) { user.lists.default }
+      it 'removes a movie from the default list' do
+        delete :destroy, {
+          id: movie.imdb_id
+        }
+
+        expect(response).to be_successful
+        expect(list.movies).to_not include movie
+      end
+    end
+
+    describe '#add_to_list' do
+      let(:movie) { create :movie, user: user }
+      let(:list) { create :list, user: user }
+
+      it 'adds a given movie to a list' do
+        put :add_to_list, {
+          movie_id: movie.id,
+          list_id: list.id,
+          format: :js
+        }
+
+        expect(response).to be_successful
+        expect(list.movies).to include movie
+      end
+
+      it 'works only via JS' do
+        put :add_to_list, {
+          movie_id: movie.id,
+          list_id: list.id
+        }
+
+        expect(response).to_not be_successful
+      end
+    end
+
+    describe '#delete_from_list' do
+      let(:list) { create :list, user: user }
+      let(:movie) { create :movie, user: user, lists: [list] }
+
+      it 'adds a given movie to a list' do
+        put :delete_from_list, {
+          movie_id: movie.id,
+          list_id: list.id,
+          format: :js
+        }
+
+        expect(response).to be_successful
+        expect(list.movies).to_not include movie
+      end
+
+      it 'works only via JS' do
+        put :delete_from_list, {
+          movie_id: movie.id,
+          list_id: list.id
+        }
+
+        expect(response).to_not be_successful
       end
     end
   end
