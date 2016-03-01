@@ -22,6 +22,25 @@ describe ListsPage do
         expect(page).to have_content list.name
       end
     end
+
+    describe 'movie list' do
+
+      it 'shows a list of movies underneath' do
+        4.times do |n|
+          create :movie, name: "Movie ##{n}", user: user, lists: [user.lists.default]
+          expect(page).to have_content "Movie ##{n}"
+        end
+      end
+
+      it 'shows 5 movies at maximum' do
+        12.times do |n|
+          create :movie, name: "Movie ##{n}", user: user, lists: [user.lists.default]
+        end
+        (6..12).each do |n|
+          expect(page).not_to have_content "Movie ##{n}"
+        end
+      end
+    end
   end
 
   describe '#edit' do

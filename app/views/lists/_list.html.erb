@@ -8,4 +8,14 @@
       <% end %>
     </small>
   </h2>
+  <ul class="movies">
+    <% if list.movies.any? %>
+      <% presentable_movies(list).each do |movie| %>
+        <%= render partial: 'movie', locals: { movie: movie } %>
+      <% end %>
+      <% if show_more_link?(list) %>
+        <li class="movie more"><%= t('.more') %></li>
+      <% end %>
+    <% end %>
+  </ul>
 </div>

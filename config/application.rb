@@ -24,6 +24,9 @@ module MovieSamplr
     config.active_record.raise_in_transactional_callbacks = true
 
     # load all the actions alongside the normal rails autoloads
-    config.autoload_paths << Rails.root.join('app', 'actions')
+    config.autoload_paths += [
+      Rails.root.join('app', 'actions'),
+      Rails.root.join('app', 'presenters')
+    ]
   end
 end

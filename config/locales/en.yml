@@ -21,6 +21,8 @@
 
 en:
   # models
+  movie:
+    loading: This movies data is currently being fetched from IMDb
   lists:
     default_name: My movie collection
     index:
@@ -31,6 +33,7 @@ en:
     list:
       rename: Rename
       delete: Remove this list
+      empty: This list has no entries
     edit:
       rename: What is the new name for the list?
     new:
