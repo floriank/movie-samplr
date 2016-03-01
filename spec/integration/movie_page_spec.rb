@@ -1,7 +1,7 @@
 require 'rails_helper'
 require_relative 'movie_page'
 
-describe MoviePage, js: true do
+describe MoviePage, js: true, vcr: true do
   let(:page) { described_class.new }
 
   before do
@@ -12,7 +12,7 @@ describe MoviePage, js: true do
     Capybara.use_default_driver
   end
 
-  describe '#show' do
+  describe '#show', :vcr do
     let(:user) { create :user }
     let(:list) { user.lists.default }
     let(:movie) { create :movie, user: user, lists: [list] }

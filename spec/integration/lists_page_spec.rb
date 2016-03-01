@@ -1,7 +1,7 @@
 require 'rails_helper'
 require_relative 'lists_page'
 
-describe ListsPage do
+describe ListsPage, :vcr do
   let(:page) { described_class.new }
   let(:user) { create :user }
 
@@ -93,7 +93,7 @@ describe ListsPage do
     end
   end
 
-  describe '#destroy', js: true do
+  describe '#destroy', js: true, vcr: true do
     let(:list_name) { 'Romantic comedies' }
 
     before do

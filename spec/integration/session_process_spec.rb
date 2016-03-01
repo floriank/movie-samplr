@@ -1,7 +1,7 @@
 require 'rails_helper'
 require_relative 'session_process'
 
-describe SessionProcess do
+describe SessionProcess, :vcr do
   let(:email) { 'dead@pool.com' }
   let(:password) { 'h3llok1tty' }
   let(:new_user) { build :user, password: password, email: email }

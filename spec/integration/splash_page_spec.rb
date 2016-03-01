@@ -1,7 +1,7 @@
 require 'rails_helper'
 require_relative 'splash_page'
 
-describe SplashPage do
+describe SplashPage, :vcr do
   let(:page) { described_class.new }
 
   it 'displays a welcome' do

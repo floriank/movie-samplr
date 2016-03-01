@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe ImdbDataWorker do
+describe ImdbDataWorker, :vcr do
   let(:id) { "1431045" } # deadpool
   let(:worker) { described_class.new }
 

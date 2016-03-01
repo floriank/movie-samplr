@@ -2,7 +2,7 @@ require 'rails_helper'
 
 require_relative 'search_result_page'
 
-describe SearchResultPage, js: true do
+describe SearchResultPage, js: true, vcr: true do
   let(:page) { described_class.new }
   let(:user) { create :user, email: 'bruce@banner.com' }
 

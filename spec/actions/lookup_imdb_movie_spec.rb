@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe LookupImdbMovie do
+describe LookupImdbMovie, :vcr do
   let(:action) { described_class }
 
   it 'looks up a movie via imdb' do

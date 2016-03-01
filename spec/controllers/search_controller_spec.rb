@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe SearchController, type: :controller do
+RSpec.describe SearchController, type: :controller, vcr: true do
   it 'requires a movie query to be accessed' do
     get :index, m: 'Primer'
     expect(response).to be_successful

@@ -9,7 +9,7 @@ describe MovieSearchResult do
   end
 
   it 'decides if a result is local' do
-    reult = described_class.new title: 'Deadpool', type: 'imdb'
+    result = described_class.new title: 'Deadpool', type: 'imdb', id: 'foo'
     expect(result.local?).to be_falsy
     expect(result.imdb?).to be_truthy
   end
