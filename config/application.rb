@@ -29,5 +29,6 @@ module MovieSamplr
       Rails.root.join('app', 'presenters'),
       Rails.root.join('app', 'workers')
     ]
+    config.action_mailer.default_url_options = { host: "movie.samplr.io" }
   end
 end

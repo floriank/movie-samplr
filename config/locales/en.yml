@@ -47,6 +47,7 @@ en:
       go_to_collection: My movie collection
       favourite_movie: What's your favourite movie?
       welcome_back: Welcome back!
+      go_to_login: Login
   search:
     index:
       search_result_for: "Search results for \"%{query}\""
@@ -92,6 +93,7 @@ en:
         email_placeholder: Email address
         password_placeholder: Your password
         log_in: Log in to continue
+        remember_me: Remember me
     passwords:
       new:
         forgot_password: Forgot your password? No problem!

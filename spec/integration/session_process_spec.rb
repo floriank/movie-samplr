@@ -89,11 +89,25 @@ describe SessionProcess, :vcr do
     it_behaves_like 'for a logged in user'
   end
 
-  describe '#forgot_password' do
+  describe '#forgot_password', js: true do
     let(:page) { described_class.new(new_user_password_path) }
 
     it_behaves_like 'for a logged in user'
 
-    pending "hould be tested - #{__FILE__}"
+    before do
+      create :user
+    end
+
+    it 'shows an error message if the email is not in the db' do
+      page.fill_in 'user[email]', with: 'foo@bar.com'
+      page.click_on page.t('passwords.new.send_instructions')
+      expect(page.error_message?).to be_truthy
+    end
+
+    it 'sends the user back to the login page afterwards' do
+      page.fill_in 'user[email]', with: user.email
+      page.click_on page.t('passwords.new.send_instructions')
+      expect(page).to have_content page.t('sessions.new.welcome_back')
+    end
   end
 end
