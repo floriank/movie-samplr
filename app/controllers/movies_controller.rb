@@ -29,7 +29,6 @@ class MoviesController < ApplicationController
     @movie = MoviePresenter.new(Movie.by(current_user).find(params[:id]))
   end
 
-  # aka. remove from list
   def destroy
     find_movie
     movie, errors = RemoveMovieFromList.for user: current_user, movie: @movie
@@ -37,6 +36,29 @@ class MoviesController < ApplicationController
       render json: { errors: errors }, status: :unauthorized
     else
       render json: { movie: movie }, status: :ok
+    end
+  end
+
+  def add_to_list
+    find_movie_and_list
+    respond_to do |format|
+      format.js do
+        AddMovieToList.for(title: @movie.name, list: @list, imdb_id: @movie.imdb_id, user: current_user)
+        @movie = MoviePresenter.new(@movie)
+        render :lists_update
+      end
+    end
+  end
+
+  def delete_from_list
+    find_movie_and_list
+
+    respond_to do |format|
+      format.js do
+        RemoveMovieFromList.for(movie: @movie, list: @list, user: current_user)
+        @movie = MoviePresenter.new(@movie)
+        render :lists_update
+      end
     end
   end
 
@@ -60,5 +82,10 @@ class MoviesController < ApplicationController
 
   def find_movie
     @movie = Movie.by(current_user).find_by(imdb_id: params[:id])
+  end
+
+  def find_movie_and_list
+    @movie = Movie.by(current_user).find(params[:movie_id])
+    @list = List.for(current_user).find(params[:list_id])
   end
 end

@@ -1,0 +1,16 @@
+<div id="list-<%= remove ? 'removal' : 'add' %>">
+  <% unless lists.empty? %>
+  <h3><%= heading %></h3>
+  <ul>
+    <% lists.each do |list| %>
+      <li>
+        <% if remove %>
+          <%= link_to list.name, delete_lists_movies_path(list, movie), data: { remote: true, method: :delete } %>
+        <% else %>
+          <%= link_to list.name, add_lists_movies_path(list, movie), data: { remote: true, method: :put } %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+  <% end %>
+</div>

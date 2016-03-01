@@ -11,6 +11,10 @@ class MoviePage
     visit movie_path(movie)
   end
 
+  def click_on_list(list)
+    click_on list.name
+  end
+
   def t(key)
     I18n.t("movies.show.#{key}")
   end

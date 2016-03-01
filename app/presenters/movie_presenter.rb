@@ -1,6 +1,6 @@
 class MoviePresenter
   include Rails.application.routes.url_helpers
-  delegate :name, :notes, :lists, to: :@movie
+  delegate :name, :notes, :lists, :user, to: :@movie
 
   alias_method :title, :name
   attr_reader :movie
@@ -14,7 +14,7 @@ class MoviePresenter
   end
 
   def cast
-    loaded? ? dataset.cast.join(', ') : ''
+    loaded? ? dataset.cast.first(10).join(', ') : ''
   end
 
   def directors
@@ -44,6 +44,10 @@ class MoviePresenter
 
   def path
     movie_path @movie
+  end
+
+  def possible_lists
+    user.lists.where.not(id: lists.map(&:id)).all
   end
 
   private

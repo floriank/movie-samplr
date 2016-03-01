@@ -24,7 +24,7 @@ en:
   movie:
     loading: This movies data is currently being fetched from IMDb
   lists:
-    default_name: My movie collection
+    default_name: My movies
     index:
       create: Add a new list
     form:
@@ -64,7 +64,7 @@ en:
       added_to_list: Added!
       register_to_add: Log in to add to list
   movies:
-    show:
+    show: &show
       movie_being_loaded: This movies data is curently being fetched from <a href="http://imdb.com">IMDb</a>
       lists: This movie is in the following lists
       no_notes: There is no notes for this movie! Click here to add some!
@@ -72,6 +72,11 @@ en:
       your_notes: Your notes
       save_notes: Save these notes
       saving: Saving...
+      data: Information
+      lists_to_remove: This movie is on these lists
+      lists_to_add: This movie can be added to these lists
+    lists_update:
+      <<: *show
   # devise override
   devise:
     registrations:

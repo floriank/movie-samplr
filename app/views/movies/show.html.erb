@@ -38,11 +38,7 @@
         <% end %>
       </div>
     </div>
-    <h3><%= t('.lists') %></h3>
-    <ul>
-      <% @movie.lists.each do |list| %>
-        <li><%= link_to list.name, list_path(list) %></li>
-      <% end %>
-    </ul>
+    <%= render partial: 'lists', locals: { heading: t('.lists_to_remove'), remove: true, movie: @movie.movie, lists: @movie.lists } %>
+    <%= render partial: 'lists', locals: { heading: t('.lists_to_add'), remove: false,  movie: @movie.movie, lists: @movie.possible_lists } %>
   </div>
 </div>

@@ -1,0 +1,6 @@
+(function() {
+  remove = $("<%=j render partial: 'lists', locals: { heading: t('.lists_to_remove'), remove: true, movie: @movie.movie, lists: @movie.lists } %>");
+  add = $("<%=j render partial: 'lists', locals: { heading: t('.lists_to_add'), remove: false,  movie: @movie.movie, lists: @movie.possible_lists }%>");
+  $('#list-removal').replaceWith(remove);
+  $('#list-add').replaceWith(add);
+}());

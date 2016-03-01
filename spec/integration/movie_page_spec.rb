@@ -14,8 +14,10 @@ describe MoviePage, js: true do
 
   describe '#show' do
     let(:user) { create :user }
-    let(:movie) { create :movie, user: user }
+    let(:list) { user.lists.default }
+    let(:movie) { create :movie, user: user, lists: [list] }
     let(:note) { 'Awesome movie, would watch again!' }
+
     before(:each) do
       page.login_as! user
     end
@@ -26,6 +28,27 @@ describe MoviePage, js: true do
       page.wait_for_ajax
 
       expect(page).to have_content note
+    end
+
+    it 'allows for moving movies in and out of lists' do
+      list = user.lists.create name: 'My new list'
+      page.go_to movie
+      expect(page).to have_content page.t('.lists_to_add')
+
+      page.click_on_list list
+      page.wait_for_ajax
+
+      expect(page).to have_content page.t('.lists_to_remove')
+    end
+
+    it 'allows for removing the movie from a list' do
+      page.go_to movie
+      expect(page).to have_content page.t('.lists_to_remove')
+
+      page.click_on_list user.lists.default
+      page.wait_for_ajax
+
+      expect(page).to have_content page.t('.lists_to_add')
     end
 
     context 'without a dataset' do
