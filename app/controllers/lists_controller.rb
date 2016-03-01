@@ -4,6 +4,19 @@ class ListsController < ApplicationController
   def index
   end
 
+  def new
+    @list = List.for(current_user).new
+  end
+
+  def create
+    @list = List.for(current_user).new(list_params)
+    if @list.save
+      redirect_to lists_path
+    else
+      render :new
+    end
+  end
+
   def edit
     @list = List.for(current_user).find(params[:id])
   rescue
@@ -19,6 +32,13 @@ class ListsController < ApplicationController
     end
   rescue
     redirect_to lists_path
+  end
+
+  def destroy
+    @list = List.for(current_user).find params[:id]
+    @list.destroy!
+  rescue
+    render json: { error: 'Cannot delete list' }, status: :unprocessable_entity
   end
 
   private

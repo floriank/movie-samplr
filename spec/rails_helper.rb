@@ -52,21 +52,23 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
   config.use_transactional_fixtures = false
 
-  # Use transactions by default
-  config.before :each do
+  config.before(:suite) do
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
     DatabaseCleaner.strategy = :transaction
   end
 
-  # For the javascript-enabled tests, switch to truncation, but *only on tables that were used*
-  config.before :each, js: true do
-    DatabaseCleaner.strategy = :truncation, { pre_count: true }
+  config.before(:each, :js => true) do
+    DatabaseCleaner.strategy = :truncation
   end
 
-  config.before :each do
+  config.before(:each) do
     DatabaseCleaner.start
   end
 
-  config.after :each do
+  config.after(:each) do
     DatabaseCleaner.clean
   end
 end
@@ -96,6 +98,10 @@ module CommonPageObject
 
   def reload
     visit current_url
+  end
+
+  def error_message?
+    find('#error_explanation').present?
   end
 
   def wait_for_ajax

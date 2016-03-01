@@ -32,5 +32,52 @@ describe ListsPage do
       expect(page).to have_content(list_name)
       expect(user.lists.default.name).to eql list_name
     end
+
+    it 'does not allow the renaming to a name shorter than 5 character' do
+      page.go_to_collection
+      page.rename_default_list('foo')
+      expect(page.error_message?).to be_truthy
+    end
+  end
+
+  describe '#create' do
+    let(:list_name) { 'Action & Adventure' }
+    it 'allows the creation of new lists' do
+      page.go_to_collection
+      page.create_new_list(list_name)
+      expect(page).to have_content(list_name)
+
+      expect(user.lists.last.default).to be_falsy
+      expect(user.lists.last.name).to eql list_name
+    end
+
+    it 'does not allow the creation of a list with a name shorter than 5 characters' do
+      page.go_to_collection
+      page.create_new_list('foo')
+      expect(page.error_message?).to be_truthy
+    end
+  end
+
+  describe '#destroy', js: true do
+    let(:list_name) { 'Romantic comedies' }
+
+    before do
+      Capybara.current_driver = :selenium
+      user.lists.create name: list_name
+    end
+
+    after do
+      Capybara.use_default_driver
+    end
+
+    it 'removes a list on click' do
+      # we have to do this manually here, as the before hook is overriden
+      page.login_as! user
+      page.go_to_collection
+      page.remove_first_custom_list
+      page.wait_for_ajax
+
+      expect(page).to_not have_content list_name
+    end
   end
 end

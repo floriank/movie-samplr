@@ -23,12 +23,18 @@ en:
   # models
   lists:
     default_name: My movie collection
+    index:
+      create: Add a new list
+    form:
+      name: Name for the list
+      submit: Use this name
     list:
       rename: Rename
+      delete: Remove this list
     edit:
       rename: What is the new name for the list?
-      submit: Use this name
-      name: Name for the list
+    new:
+      new: Create a new list
   # views
   home:
     index:

@@ -26,7 +26,7 @@
           </li>
           <% if user_signed_in? %>
             <li>
-              <%= link_to t('.my_collection'), '#' %>
+              <%= link_to t('.my_collection'), lists_path %>
             </li>
             <li>
               <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>

@@ -6,3 +6,6 @@
     <%= render partial: 'list', locals: { list: list } %>
   <% end %>
 </div>
+<div class="actions">
+  <%= link_to t('.create'), new_list_path, class: 'btn btn-default' %>
+</div>

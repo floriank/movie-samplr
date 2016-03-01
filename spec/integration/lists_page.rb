@@ -8,7 +8,17 @@ class ListsPage
   def rename_default_list(name)
     first('.rename-link').click
     fill_in 'list[name]', with: name
-    click_on t('edit.submit')
+    click_on t('form.submit')
+  end
+
+  def create_new_list(name)
+    click_on t('index.create')
+    fill_in 'list_name', with: name
+    click_on t('form.submit')
+  end
+
+  def remove_first_custom_list
+    first('.delete-link').click
   end
 
   def t(key)

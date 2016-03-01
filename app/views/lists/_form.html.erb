@@ -1,0 +1,16 @@
+<%= form_for(@list) do |f| %>
+  <% if @list.errors.any? %>
+    <div id="error_explanation">
+      <ul class="errors">
+        <% @list.errors.full_messages.each do |err| %>
+          <li><%= err %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :name, class: 'control-label sr-only' %>
+    <%= f.text_field :name, class: 'form-control', placeholder: t('.name') %>
+  </div>
+  <%= f.submit t('.submit'), class: 'btn btn-default' %>
+<% end %>

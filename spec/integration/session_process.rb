@@ -19,10 +19,6 @@ class SessionProcess
     click_on t('sessions.new.log_in')
   end
 
-  def error_message?
-    find('#error_explanation').present?
-  end
-
   def switch_to_login
     click_on t('shared.links.already_registered_login')
   end

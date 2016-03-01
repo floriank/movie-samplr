@@ -16,5 +16,7 @@
     </div>
     <%= content_for :footer %>
     <%= javascript_include_tag 'application' %>
+    <%# this turns animations off in testing %>
+    <%= javascript_tag '$.fx.off = true;' if Rails.env.test? %>
   </body>
 </html>

@@ -1,10 +1,10 @@
-<div class="list">
+<div class="list" id="list-<%= list.id %>">
   <h2>
     <%= list.name %>
     <small class="actions">
       <%= link_to t('.rename'), edit_list_path(list), class: 'rename-link' %>
       <% unless list.default? %>
-        | <%= link_to t('.delete'), '#' %>
+        | <%= link_to t('.delete'), list_path(list), data: { remote: true, method: :delete }, class: 'delete-link' %>
       <% end %>
     </small>
   </h2>
