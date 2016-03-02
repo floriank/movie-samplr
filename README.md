@@ -43,6 +43,13 @@ should boot up the sidekiq queue for processing, otherwise movies added will not
 
 I prepared a docker composition for your convenience. Run `docker-compose up` to make everything available under http://dev:8080. Rails runs in the container in production mode on `thin`.
 
+And please, if you have not already:
+
+```
+# so that the local docker image has a db config
+cp config/database.yml.example config/database.yml
+```
+
 Do not forget to migrate the database:
 
 ```
