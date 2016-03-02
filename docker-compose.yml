@@ -1,0 +1,47 @@
+version: "2"
+services:
+  # the database image
+  db:
+    image: "postgres:9.4"
+    environment:
+      POSTGRES_USER: moviesamplr
+      POSTGRES_PASSWORD: samplr
+      POSTGRES_DB: moviesamplr
+    ports:
+      # maintenance port
+      - "5433:5432"
+    volumes:
+      - dbdata:/var/lib/postgres
+
+  redis:
+    image: "redis:2.8.23"
+    ports:
+      - "6379:6379"
+
+  # the main image, this is the application
+  web:
+    build: "."
+    environment:
+      PORT: "3000"
+      RAILS_ENV: "production"
+      MOVIESAMPLR_DB_USER: moviesamplr
+      MOVIESAMPLR_DB_PASS: samplr
+      DEVISE_TOKEN_AUTH_SECRET_KEY: 0628128ee91a4f7c49f85b41aff8a6b80d1959d81686160a1a1d053c5c737dcb9bc0e27a9cf01cf1fa3d0fbceeecfd7ccdce3250c20b2bca2c24f7fa16e116fc
+      SECRET_KEY_BASE: 54c583d075eba5494da71826332c2dc1f81ca90f0ee2ddda3ba5b12bd08b84a8b70566a2e52fdac37fa2e0e2fc3da1448eada8de8203ef727d95030aaf801211
+      RAILS_SERVE_STATIC_FILES: 'yes'
+    ports:
+      - "8080:8080"
+    links:
+      - "db:db"
+      - "redis:redis"
+  queue:
+    build: "."
+    links:
+      - "db:db"
+      - "redis:redis"
+    command: 'bundle exec sidekiq'
+
+volumes:
+  # for persistance of database data
+  dbdata:
+    driver: local

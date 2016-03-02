@@ -21,7 +21,7 @@ I chose to build the Rails-variation of the application, since this was preferre
 - PostgreSQL backend
 - Redis for managing Sidekiq queue
 
-Instead of having the suer upload data themselves I chose to grant access to IMDb. The integration is done via the `imdb` gem. Additionally, the CRUD part is doubled. Movies can be organizsed into lists which reuse movie objects as much as possible.
+Instead of having the user upload data themselves I chose to grant access to IMDb. The integration is done via the `imdb` gem. Additionally, the CRUD part is doubled. Movies can be organised into lists which reuse movie objects as much as possible.
 
 I aim for a solidly tested and easy to build upon application which is able to be put in production. that includes being a responsive, ideally mobile-ready application that is well-tested and extensible in the future.
 
@@ -38,6 +38,16 @@ bundle exec sidekiq
 ```
 
 should boot up the sidekiq queue for processing, otherwise movies added will not be filled up.
+
+## Docker
+
+I prepared a docker composition for your convenience. Run `docker-compose up` to make everything available under http://dev:8080. Rails runs in the container in production mode on `thin`.
+
+Do not forget to migrate the database:
+
+```
+docker-compose run web bundle exec rake db:migrate
+```
 
 ## Flaws and improvements
 

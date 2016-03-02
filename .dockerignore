@@ -1,0 +1,14 @@
+# all logfiles and tempfiles.
+log/*
+tmp
+
+*.swp
+*~
+.project
+.idea
+.secret
+.DS_Store
+
+# added by GitSavvy
+.byebug_history
+coverage
