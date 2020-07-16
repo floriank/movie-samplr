@@ -29,7 +29,7 @@ group :development, :test do
 end
 
 gem 'bcrypt', '~> 3.1'
-gem 'devise', '~> 3.5'
+gem 'devise', '~> 4.7'
 gem 'imdb', '~> 0.8'
 gem 'sidekiq', '~> 4.1'
 
